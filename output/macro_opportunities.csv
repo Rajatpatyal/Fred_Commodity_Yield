@@ -1,0 +1,20 @@
+Asset,Category,CurrentValue,RelativeStrength,OpportunityScore
+Dow Jones,Equity,51307.79,10.0,6.83
+NASDAQ,Equity,27093.9,5.28,4.94
+Copper,Commodity,12528.71,2.44,3.81
+S&P 500,Equity,7609.78,1.48,3.43
+Coffee,Commodity,334.11,0.07,2.86
+Inflation,Macro,332.41,0.06,2.86
+Soybeans,Commodity,406.44,0.08,2.86
+Corn,Commodity,213.3,0.04,2.85
+Wheat,Commodity,193.88,0.04,2.85
+Cotton,Commodity,76.94,0.01,2.84
+WTI Crude,Commodity,97.63,0.02,2.84
+Natural Gas,Commodity,3.1,0.0,2.83
+Sugar,Commodity,33.4,0.01,2.83
+2Y Treasury,Fixed Income,4.05,0.0,2.83
+VIX,Macro,16.05,0.0,2.83
+10Y Treasury,Fixed Income,4.47,0.0,2.83
+30Y Treasury,Fixed Income,4.99,0.0,2.83
+Fed Funds,Macro,3.63,0.0,2.83
+Unemployment,Macro,4.3,0.0,2.83
