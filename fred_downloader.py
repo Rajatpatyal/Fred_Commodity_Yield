@@ -1,3 +1,4 @@
+
 import requests
 import pandas as pd
 import time
@@ -130,88 +131,103 @@ class FredDownloader:
 
         assets = {
 
-            # ==========================
-            # ENERGY
-            # ==========================
+    # ===================================
+    # ENERGY
+    # ===================================
 
-            "DCOILWTICO":
-            "WTI Crude",
+    "DCOILWTICO": "WTI Crude",
+    "DHHNGSP": "Natural Gas",
 
-            "DHHNGSP":
-            "Natural Gas",
+    # ===================================
+    # INDUSTRIAL METALS
+    # ===================================
 
-            # ==========================
-            # INDUSTRIAL METALS
-            # ==========================
+    "PCOPPUSDM": "Copper",
+    "PALUMUSDM": "Aluminum",
+    "PNICKUSDM": "Nickel",
+    "PZINCUSDM": "Zinc",
 
-            "PCOPPUSDM":
-            "Copper",
+    # Optional (test availability)
 
-            # ==========================
-            # AGRICULTURE
-            # ==========================
+    "PLEADUSDM": "Lead",
+    "PTINUSDM": "Tin",
 
-            "PMAIZMTUSDM":
-            "Corn",
+    # ===================================
+    # AGRICULTURE
+    # ===================================
 
-            "PWHEAMTUSDM":
-            "Wheat",
+    "PMAIZMTUSDM": "Corn",
+    "PWHEAMTUSDM": "Wheat",
+    "PSOYBUSDQ": "Soybeans",
+    "PCOTTINDUSDM": "Cotton",
+    "PSUGAUSAUSDM": "Sugar",
+    "PCOFFOTMUSDM": "Coffee",
+    "PRICENPQUSDM": "Rice",
 
-            "PSOYBUSDQ":
-            "Soybeans",
+    # Optional (test availability)
 
-            "PCOTTINDUSDM":
-            "Cotton",
+    "PBARLUSDQ": "Barley",
+    "POATSUSDQ": "Oats",
 
-            "PSUGAUSAUSDM":
-            "Sugar",
+    # ===================================
+    # LIVESTOCK
+    # ===================================
 
-            "PCOFFOTMUSDM":
-            "Coffee",
+    "PBEEFUSDQ": "Beef",
+    "PPORKUSDQ": "Pork",
 
-            # ==========================
-            # EQUITIES
-            # ==========================
+    # Optional (test availability)
 
-            "SP500":
-            "S&P 500",
+    "PMILKUSDQ": "Milk",
+    "PPOULTRYUSDQ": "Poultry",
+    "PEGGSUSDQ": "Eggs",
 
-            "NASDAQCOM":
-            "NASDAQ",
+    # ===================================
+    # EQUITIES
+    # ===================================
 
-            "DJIA":
-            "Dow Jones",
+    "SP500": "S&P 500",
+    "NASDAQCOM": "NASDAQ",
+    "DJIA": "Dow Jones",
+    "VIXCLS": "VIX",
 
-            "VIXCLS":
-            "VIX",
+    # ===================================
+    # FIXED INCOME
+    # ===================================
 
-            # ==========================
-            # FIXED INCOME
-            # ==========================
+    "DGS2": "2Y Treasury",
+    "DGS10": "10Y Treasury",
+    "DGS30": "30Y Treasury",
 
-            "DGS2":
-            "2Y Treasury",
+    # ===================================
+    # FOREX
+    # ===================================
 
-            "DGS10":
-            "10Y Treasury",
+    "DEXINUS": "USD/INR",
+    "DEXJPUS": "JPY/USD",
+    "DEXUSEU": "EUR/USD",
+    "DEXUSUK": "GBP/USD",
+    "DEXSZUS": "CHF/USD",
+    "DEXCAUS": "CAD/USD",
+    "DEXKOUS": "KRW/USD",
+    "DEXUSAL": "AUD/USD",
 
-            "DGS30":
-            "30Y Treasury",
+    # ===================================
+    # DOLLAR INDEX
+    # ===================================
 
-            # ==========================
-            # ECONOMIC
-            # ==========================
+    "DTWEXBGS": "US Dollar Index",
 
-            "FEDFUNDS":
-            "Fed Funds",
+    # ===================================
+    # ECONOMIC
+    # ===================================
 
-            "UNRATE":
-            "Unemployment",
+    "FEDFUNDS": "Fed Funds",
+    "UNRATE": "Unemployment",
+    "CPIAUCSL": "Inflation"
 
-            "CPIAUCSL":
-            "Inflation"
-
-        }
+}
+        
 
         rows = []
 
@@ -241,15 +257,12 @@ class FredDownloader:
 
             rows.append({
 
-                "Asset":
-                label,
+                "Asset": label,
 
-                "Value":
-                value
+                "Value": value
 
             })
 
-            # protect from FRED rate limits
             time.sleep(1)
 
         return pd.DataFrame(
@@ -293,7 +306,7 @@ if __name__ == "__main__":
 
     df = fred.save_snapshot()
 
-    print("\nMacro Snapshot")
+    print("\nMacro Snapshot\n")
 
     print(df)
 
@@ -301,3 +314,4 @@ if __name__ == "__main__":
         "\nRows:",
         len(df)
     )
+

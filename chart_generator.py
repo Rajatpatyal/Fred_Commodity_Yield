@@ -12,71 +12,161 @@ class ChartGenerator:
             exist_ok=True
         )
 
-    # ==========================================
-    # COMMODITIES
-    # ==========================================
+    # =====================================
+    # PRECIOUS METALS
+    # =====================================
 
-    def commodity_dashboard(
+    def precious_metals_dashboard(
         self,
-        snapshot
+        metals_df
     ):
 
-        commodities = snapshot[
+        metals = metals_df[
 
-            snapshot["Asset"].isin([
+            metals_df["Asset"].isin([
 
-                "WTI Crude",
-                "Natural Gas",
-                "Copper",
-                "Corn",
-                "Wheat",
-                "Soybeans",
-                "Cotton",
-                "Sugar",
-                "Coffee"
+                "Gold",
+                "Silver",
+                "Platinum",
+                "Palladium"
 
             ])
 
         ]
 
         plt.figure(
-            figsize=(12,6)
+            figsize=(10, 6)
         )
 
         plt.bar(
 
-            commodities["Asset"],
+            metals["Asset"],
 
-            commodities["Value"]
+            metals["Value"]
 
-        )
-
-        plt.xticks(
-            rotation=45
         )
 
         plt.title(
-            "Commodity Dashboard"
+            "Precious Metals"
         )
 
         plt.tight_layout()
 
         file = (
             "output/charts/"
-            "commodity_dashboard.png"
+            "precious_metals_dashboard.png"
         )
 
-        plt.savefig(
-            file
-        )
+        plt.savefig(file)
 
         plt.close()
 
         return file
 
-    # ==========================================
+    # =====================================
+    # INDUSTRIAL METALS
+    # =====================================
+
+    def industrial_metals_dashboard(
+        self,
+        snapshot
+    ):
+
+        metals = snapshot[
+
+            snapshot["Asset"].isin([
+
+                "Copper",
+                "Aluminum",
+                "Nickel",
+                "Zinc",
+                "Lead",
+                "Tin"
+
+            ])
+
+        ]
+
+        plt.figure(
+            figsize=(12, 6)
+        )
+
+        plt.bar(
+
+            metals["Asset"],
+
+            metals["Value"]
+
+        )
+
+        plt.title(
+            "Industrial Metals"
+        )
+
+        plt.tight_layout()
+
+        file = (
+            "output/charts/"
+            "industrial_metals_dashboard.png"
+        )
+
+        plt.savefig(file)
+
+        plt.close()
+
+        return file
+
+    # =====================================
+    # ENERGY
+    # =====================================
+
+    def energy_dashboard(
+        self,
+        snapshot
+    ):
+
+        energy = snapshot[
+
+            snapshot["Asset"].isin([
+
+                "WTI Crude",
+                "Natural Gas"
+
+            ])
+
+        ]
+
+        plt.figure(
+            figsize=(8, 5)
+        )
+
+        plt.bar(
+
+            energy["Asset"],
+
+            energy["Value"]
+
+        )
+
+        plt.title(
+            "Energy Markets"
+        )
+
+        plt.tight_layout()
+
+        file = (
+            "output/charts/"
+            "energy_dashboard.png"
+        )
+
+        plt.savefig(file)
+
+        plt.close()
+
+        return file
+        # =====================================
     # AGRICULTURE
-    # ==========================================
+    # =====================================
 
     def agriculture_dashboard(
         self,
@@ -92,14 +182,16 @@ class ChartGenerator:
                 "Soybeans",
                 "Cotton",
                 "Sugar",
-                "Coffee"
+                "Coffee",
+                "Rice",
+                "Barley"
 
             ])
 
         ]
 
         plt.figure(
-            figsize=(10,6)
+            figsize=(12, 6)
         )
 
         plt.bar(
@@ -114,6 +206,10 @@ class ChartGenerator:
             "Agriculture Markets"
         )
 
+        plt.xticks(
+            rotation=45
+        )
+
         plt.tight_layout()
 
         file = (
@@ -121,17 +217,106 @@ class ChartGenerator:
             "agriculture_dashboard.png"
         )
 
-        plt.savefig(
-            file
-        )
+        plt.savefig(file)
 
         plt.close()
 
         return file
 
-    # ==========================================
+    # =====================================
+    # LIVESTOCK
+    # =====================================
+
+    def livestock_dashboard(
+        self,
+        snapshot
+    ):
+
+        livestock = snapshot[
+
+            snapshot["Asset"].isin([
+
+                "Beef",
+                "Pork"
+
+            ])
+
+        ]
+
+        plt.figure(
+            figsize=(8, 5)
+        )
+
+        plt.bar(
+
+            livestock["Asset"],
+
+            livestock["Value"]
+
+        )
+
+        plt.title(
+            "Livestock Markets"
+        )
+
+        plt.tight_layout()
+
+        file = (
+            "output/charts/"
+            "livestock_dashboard.png"
+        )
+
+        plt.savefig(file)
+
+        plt.close()
+
+        return file
+
+    # =====================================
+    # FOREX
+    # =====================================
+
+    def forex_dashboard(
+        self,
+        forex_df
+    ):
+
+        plt.figure(
+            figsize=(12, 6)
+        )
+
+        plt.bar(
+
+            forex_df["Asset"],
+
+            forex_df["Value"]
+
+        )
+
+        plt.title(
+            "Forex Markets"
+        )
+
+        plt.xticks(
+            rotation=45
+        )
+
+        plt.tight_layout()
+
+        file = (
+            "output/charts/"
+            "forex_dashboard.png"
+        )
+
+        plt.savefig(file)
+
+        plt.close()
+
+        return file
+
+    # =====================================
     # YIELD CURVE
-    # ==========================================
+    # =====================================
 
     def yield_curve(
         self,
@@ -151,7 +336,7 @@ class ChartGenerator:
         ]
 
         plt.figure(
-            figsize=(8,5)
+            figsize=(8, 5)
         )
 
         plt.plot(
@@ -172,22 +357,22 @@ class ChartGenerator:
 
         plt.grid(True)
 
+        plt.tight_layout()
+
         file = (
             "output/charts/"
             "yield_curve.png"
         )
 
-        plt.savefig(
-            file
-        )
+        plt.savefig(file)
 
         plt.close()
 
         return file
-
-    # ==========================================
-    # SPREADS
-    # ==========================================
+    
+        # =====================================
+    # SPREAD DASHBOARD
+    # =====================================
 
     def spread_dashboard(
         self,
@@ -195,7 +380,7 @@ class ChartGenerator:
     ):
 
         plt.figure(
-            figsize=(10,6)
+            figsize=(12, 7)
         )
 
         plt.barh(
@@ -217,42 +402,40 @@ class ChartGenerator:
             "spread_dashboard.png"
         )
 
-        plt.savefig(
-            file
-        )
+        plt.savefig(file)
 
         plt.close()
 
         return file
 
-    # ==========================================
+    # =====================================
     # OPPORTUNITY RANKING
-    # ==========================================
+    # =====================================
 
-    def opportunity_chart(
+    def opportunity_dashboard(
         self,
         opportunities
     ):
 
         top = (
             opportunities
-            .head(15)
+            .head(20)
         )
 
         plt.figure(
-            figsize=(12,7)
+            figsize=(12, 8)
         )
 
         plt.barh(
 
             top["Asset"],
 
-            top["OpportunityScore"]
+            top["Score"]
 
         )
 
         plt.title(
-            "Top Macro Opportunities"
+            "Top 20 Opportunities"
         )
 
         plt.tight_layout()
@@ -262,17 +445,15 @@ class ChartGenerator:
             "opportunity_ranking.png"
         )
 
-        plt.savefig(
-            file
-        )
+        plt.savefig(file)
 
         plt.close()
 
         return file
 
-    # ==========================================
+    # =====================================
     # MACRO DASHBOARD
-    # ==========================================
+    # =====================================
 
     def macro_dashboard(
         self,
@@ -283,17 +464,17 @@ class ChartGenerator:
 
             snapshot["Asset"].isin([
 
-                "VIX",
                 "Fed Funds",
                 "Inflation",
-                "Unemployment"
+                "Unemployment",
+                "US Dollar Index"
 
             ])
 
         ]
 
         plt.figure(
-            figsize=(10,6)
+            figsize=(10, 6)
         )
 
         plt.bar(
@@ -308,6 +489,10 @@ class ChartGenerator:
             "Macro Dashboard"
         )
 
+        plt.xticks(
+            rotation=30
+        )
+
         plt.tight_layout()
 
         file = (
@@ -315,23 +500,72 @@ class ChartGenerator:
             "macro_dashboard.png"
         )
 
-        plt.savefig(
-            file
-        )
+        plt.savefig(file)
 
         plt.close()
 
         return file
 
-    # ==========================================
+    # =====================================
+    # EXECUTIVE DASHBOARD
+    # =====================================
+
+    def executive_dashboard(
+        self,
+        opportunities
+    ):
+
+        top = (
+            opportunities
+            .head(10)
+        )
+
+        plt.figure(
+            figsize=(14, 8)
+        )
+
+        plt.bar(
+
+            top["Asset"],
+
+            top["Score"]
+
+        )
+
+        plt.title(
+            "Executive Macro Dashboard"
+        )
+
+        plt.xticks(
+            rotation=45
+        )
+
+        plt.tight_layout()
+
+        file = (
+            "output/charts/"
+            "executive_dashboard.png"
+        )
+
+        plt.savefig(file)
+
+        plt.close()
+
+        return file
+
+    # =====================================
     # GENERATE ALL
-    # ==========================================
+    # =====================================
 
     def generate_all(
 
         self,
 
         snapshot,
+
+        metals_df,
+
+        forex_df,
 
         spreads,
 
@@ -342,7 +576,19 @@ class ChartGenerator:
         files = []
 
         files.append(
-            self.commodity_dashboard(
+            self.precious_metals_dashboard(
+                metals_df
+            )
+        )
+
+        files.append(
+            self.industrial_metals_dashboard(
+                snapshot
+            )
+        )
+
+        files.append(
+            self.energy_dashboard(
                 snapshot
             )
         )
@@ -350,6 +596,18 @@ class ChartGenerator:
         files.append(
             self.agriculture_dashboard(
                 snapshot
+            )
+        )
+
+        files.append(
+            self.livestock_dashboard(
+                snapshot
+            )
+        )
+
+        files.append(
+            self.forex_dashboard(
+                forex_df
             )
         )
 
@@ -366,7 +624,7 @@ class ChartGenerator:
         )
 
         files.append(
-            self.opportunity_chart(
+            self.opportunity_dashboard(
                 opportunities
             )
         )
@@ -377,12 +635,18 @@ class ChartGenerator:
             )
         )
 
+        files.append(
+            self.executive_dashboard(
+                opportunities
+            )
+        )
+
         return files
 
 
-# ==========================================
+# =====================================
 # TEST
-# ==========================================
+# =====================================
 
 if __name__ == "__main__":
 

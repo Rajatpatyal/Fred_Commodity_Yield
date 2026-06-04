@@ -1,19 +1,28 @@
 import os
-import pandas as pd
 
 from fred_downloader import FredDownloader
+from goldapi_downloader import GoldAPIDownloader
+from forex_downloader import ForexDownloader
 from weather_downloader import WeatherDownloader
+
 from spread_analytics import SpreadAnalytics
 from opportunity_engine import OpportunityEngine
+
 from chart_generator import ChartGenerator
 from pdf_report_builder import PDFReportBuilder
 
 
-# =====================================================
-# CONFIG
-# =====================================================
+# =====================================
+# CONFIGURATION
+# =====================================
 
-API_KEY = "1225facd81d80e506c97566c8d388ac8"
+FRED_API_KEY = (
+    "1225facd81d80e506c97566c8d388ac8"
+)
+
+GOLD_API_KEY = (
+    "goldapi-808061c43c397ef4856a8e614b15acd4-io"
+)
 
 OUTPUT_DIR = "output"
 
@@ -27,55 +36,102 @@ os.makedirs(
     exist_ok=True
 )
 
-# =====================================================
+# =====================================
 # START
-# =====================================================
+# =====================================
 
 print("=" * 70)
 print("GLOBAL MACRO INTELLIGENCE PLATFORM")
 print("=" * 70)
 
-# =====================================================
-# DOWNLOAD MACRO DATA
-# =====================================================
+# =====================================
+# FRED DATA
+# =====================================
 
 print("\nDownloading FRED Data...")
 
 fred = FredDownloader(
-    API_KEY
+    FRED_API_KEY
 )
 
-snapshot = (
+macro_df = (
     fred.get_macro_snapshot()
 )
 
-snapshot_file = (
-
-    os.path.join(
-
-        OUTPUT_DIR,
-
-        "macro_snapshot.csv"
-
-    )
-
+macro_file = (
+    f"{OUTPUT_DIR}/macro_snapshot.csv"
 )
 
-snapshot.to_csv(
-
-    snapshot_file,
-
+macro_df.to_csv(
+    macro_file,
     index=False
-
 )
 
 print(
-    f"Saved {snapshot_file}"
+    f"Saved {macro_file}"
 )
 
-# =====================================================
+# =====================================
+# GOLD API
+# =====================================
+
+print(
+    "\nDownloading Precious Metals..."
+)
+
+gold = GoldAPIDownloader(
+    GOLD_API_KEY
+)
+
+metals_df = (
+    gold.get_precious_metals()
+)
+
+metals_file = (
+    f"{OUTPUT_DIR}/precious_metals.csv"
+)
+
+metals_df.to_csv(
+    metals_file,
+    index=False
+)
+
+print(
+    f"Saved {metals_file}"
+)
+
+# =====================================
+# FOREX
+# =====================================
+
+print(
+    "\nDownloading Forex Markets..."
+)
+
+forex = ForexDownloader(
+    FRED_API_KEY
+)
+
+forex_df = (
+    forex.get_forex_snapshot()
+)
+
+forex_file = (
+    f"{OUTPUT_DIR}/forex_snapshot.csv"
+)
+
+forex_df.to_csv(
+    forex_file,
+    index=False
+)
+
+print(
+    f"Saved {forex_file}"
+)
+
+# =====================================
 # WEATHER
-# =====================================================
+# =====================================
 
 print(
     "\nDownloading Weather Data..."
@@ -88,41 +144,21 @@ weather_df = (
 )
 
 weather_file = (
-
-    os.path.join(
-
-        OUTPUT_DIR,
-
-        "weather_snapshot.csv"
-
-    )
-
+    f"{OUTPUT_DIR}/weather_snapshot.csv"
 )
 
 weather_df.to_csv(
-
     weather_file,
-
     index=False
-
-)
-
-agri_score = (
-
-    weather.agriculture_risk_score(
-        weather_df
-    )
-
 )
 
 print(
-    "Agriculture Score:",
-    agri_score
+    f"Saved {weather_file}"
 )
 
-# =====================================================
-# SPREADS
-# =====================================================
+# =====================================
+# SPREAD ANALYTICS
+# =====================================
 
 print(
     "\nCalculating Spreads..."
@@ -132,43 +168,38 @@ spread_engine = (
     SpreadAnalytics()
 )
 
-spreads = (
+spreads_df = (
 
-    spread_engine.calculate_spreads(
-        snapshot
+    spread_engine.calculate(
+
+        macro_df,
+
+        metals_df,
+
+        forex_df
+
     )
 
 )
 
 spread_file = (
-
-    os.path.join(
-
-        OUTPUT_DIR,
-
-        "macro_spreads.csv"
-
-    )
-
+    f"{OUTPUT_DIR}/macro_spreads.csv"
 )
 
-spreads.to_csv(
-
+spreads_df.to_csv(
     spread_file,
-
     index=False
-
 )
 
 risk_score = (
     spread_engine.risk_score(
-        snapshot
+        macro_df
     )
 )
 
 macro_score = (
     spread_engine.macro_score(
-        snapshot
+        macro_df
     )
 )
 
@@ -182,24 +213,35 @@ print(
     macro_score
 )
 
-# =====================================================
+# =====================================
 # OPPORTUNITY ENGINE
-# =====================================================
+# =====================================
 
 print(
     "\nRunning Opportunity Engine..."
 )
 
-opportunity_engine = (
+engine = (
     OpportunityEngine()
 )
 
 opportunities = (
 
-    opportunity_engine.calculate_scores(
+    engine.calculate_scores(
 
-        snapshot,
+        macro_df=
+        macro_df,
 
+        metals_df=
+        metals_df,
+
+        forex_df=
+        forex_df,
+
+        spreads_df=
+        spreads_df,
+
+        macro_score=
         macro_score
 
     )
@@ -208,13 +250,7 @@ opportunities = (
 
 opportunity_file = (
 
-    os.path.join(
-
-        OUTPUT_DIR,
-
-        "macro_opportunities.csv"
-
-    )
+    f"{OUTPUT_DIR}/macro_opportunities.csv"
 
 )
 
@@ -226,33 +262,39 @@ opportunities.to_csv(
 
 )
 
-top_opportunities = (
+trade_ideas = (
 
-    opportunity_engine.top_opportunities(
-        opportunities
+    engine.trade_ideas(
+        spreads_df
     )
 
 )
 
-trade_ideas = (
+trade_file = (
 
-    opportunity_engine.trade_ideas(
-        spreads
-    )
+    f"{OUTPUT_DIR}/trade_ideas.csv"
+
+)
+
+trade_ideas.to_csv(
+
+    trade_file,
+
+    index=False
 
 )
 
 commentary = (
 
-    opportunity_engine.commentary(
+    engine.commentary(
         opportunities
     )
 
 )
 
-# =====================================================
+# =====================================
 # CHARTS
-# =====================================================
+# =====================================
 
 print(
     "\nGenerating Charts..."
@@ -266,10 +308,19 @@ chart_files = (
 
     charts.generate_all(
 
-        snapshot,
+        snapshot=
+        macro_df,
 
-        spreads,
+        metals_df=
+        metals_df,
 
+        forex_df=
+        forex_df,
+
+        spreads=
+        spreads_df,
+
+        opportunities=
         opportunities
 
     )
@@ -283,9 +334,9 @@ for chart in chart_files:
         chart
     )
 
-# =====================================================
+# =====================================
 # PDF REPORT
-# =====================================================
+# =====================================
 
 print(
     "\nBuilding PDF..."
@@ -297,56 +348,68 @@ pdf = (
 
 pdf_file = (
 
-    os.path.join(
+    f"{OUTPUT_DIR}/Global_Macro_Intelligence_Report.pdf"
 
-        OUTPUT_DIR,
+)
 
-        "Global_Macro_Intelligence_Report.pdf"
 
-    )
+spread_engine = SpreadAnalytics()
 
+macro_score = spread_engine.macro_score(
+    macro_df
+)
+
+risk_score = spread_engine.risk_score(
+    macro_df
 )
 
 pdf.build_report(
 
-    snapshot=
-    snapshot,
+    snapshot=macro_df,
 
-    spreads=
-    spreads,
+    metals=metals_df,
 
-    opportunities=
-    opportunities,
+    forex=forex_df,
 
-    trade_ideas=
-    trade_ideas,
+    spreads=spreads_df,
 
-    commentary=
-    commentary,
+    opportunities=opportunities,
 
-    chart_files=
-    chart_files,
+    trade_ideas=trade_ideas,
 
-    output_file=
-    pdf_file
+    commentary=commentary,
+
+    chart_files=chart_files,
+
+    macro_score=macro_score,
+
+    risk_score=risk_score,
+
+    output_file=pdf_file
 
 )
 
-# =====================================================
+
+
+
+# =====================================
 # SUMMARY
-# =====================================================
+# =====================================
 
 print("\n")
 print("=" * 70)
 print("PROCESS COMPLETE")
 print("=" * 70)
 
-print("\nFiles Generated")
+print("\nGenerated Files")
 
-print(snapshot_file)
+print(macro_file)
+print(metals_file)
+print(forex_file)
 print(weather_file)
 print(spread_file)
 print(opportunity_file)
+print(trade_file)
 
 for chart in chart_files:
 
@@ -354,23 +417,26 @@ for chart in chart_files:
 
 print(pdf_file)
 
-print("\nTop Opportunities")
+print(
+    "\nTOP 20 OPPORTUNITIES\n"
+)
 
 print(
-    top_opportunities[
+
+    opportunities[
+
         [
 
             "Asset",
-
             "Category",
-
-            "OpportunityScore"
+            "Score"
 
         ]
 
-    ].head(10)
+    ]
+
+    .head(20)
+
 )
 
-print(
-    "\nDone."
-)
+print("\nDone.")

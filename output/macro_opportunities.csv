@@ -1,20 +1,48 @@
-Asset,Category,CurrentValue,RelativeStrength,OpportunityScore
-Dow Jones,Equity,51307.79,10.0,6.83
-NASDAQ,Equity,27093.9,5.28,4.94
-Copper,Commodity,12528.71,2.44,3.81
-S&P 500,Equity,7609.78,1.48,3.43
-Coffee,Commodity,334.11,0.07,2.86
-Inflation,Macro,332.41,0.06,2.86
-Soybeans,Commodity,406.44,0.08,2.86
-Corn,Commodity,213.3,0.04,2.85
-Wheat,Commodity,193.88,0.04,2.85
-Cotton,Commodity,76.94,0.01,2.84
-WTI Crude,Commodity,97.63,0.02,2.84
-Natural Gas,Commodity,3.1,0.0,2.83
-Sugar,Commodity,33.4,0.01,2.83
-2Y Treasury,Fixed Income,4.05,0.0,2.83
-VIX,Macro,16.05,0.0,2.83
-10Y Treasury,Fixed Income,4.47,0.0,2.83
-30Y Treasury,Fixed Income,4.99,0.0,2.83
-Fed Funds,Macro,3.63,0.0,2.83
-Unemployment,Macro,4.3,0.0,2.83
+Asset,Category,Score,Reason
+Copper,Industrial Metals,8.37,Positive Momentum
+Nickel,Industrial Metals,7.74,Positive Momentum
+Gold,Precious Metals,7.45,Positive Momentum
+Silver,Precious Metals,7.32,Strong Relative Strength
+Dow Jones,Equities,7.18,Neutral
+Tin,Industrial Metals,7.15,Neutral
+Soybeans,Agriculture,7.0,Positive Momentum
+NASDAQ,Equities,6.92,Neutral
+WTI Crude,Energy,6.67,Strong Relative Strength
+S&P 500,Equities,6.42,Neutral
+Coffee,Agriculture,6.17,Positive Momentum
+Aluminum,Industrial Metals,6.09,Neutral
+Zinc,Industrial Metals,6.07,Neutral
+Beef,Livestock,5.93,Constructive Setup
+Lead,Industrial Metals,5.86,Neutral
+Platinum,Precious Metals,5.86,Neutral
+KRW/USD,Forex,5.77,Neutral
+Palladium,Precious Metals,5.72,Neutral
+Rice,Agriculture,5.24,Neutral
+Inflation,Macro,5.17,Neutral
+Corn,Agriculture,4.99,Neutral
+Wheat,Agriculture,4.95,Neutral
+JPY/USD,Forex,4.88,Neutral
+USD/JPY,Macro,4.88,Neutral
+US Dollar Index,Forex,4.76,Neutral
+Barley,Agriculture,4.76,Neutral
+USD/INR,Forex,4.67,Neutral
+USD/INR,Forex,4.67,Neutral
+Pork,Livestock,4.62,Neutral
+Cotton,Agriculture,4.59,Neutral
+Sugar,Agriculture,4.26,Neutral
+VIX,Macro,3.97,Neutral
+USD/CNY,Macro,3.66,Neutral
+30Y Treasury,Fixed Income,3.56,Neutral
+10Y Treasury,Fixed Income,3.52,Neutral
+Unemployment,Macro,3.51,Neutral
+2Y Treasury,Fixed Income,3.49,Neutral
+Fed Funds,Macro,3.46,Neutral
+Natural Gas,Energy,3.4,Neutral
+CAD/USD,Forex,3.19,Neutral
+GBP/USD,Forex,3.18,Neutral
+GBP/USD,Forex,3.18,Neutral
+EUR/USD,Forex,3.15,Neutral
+EUR/USD,Forex,3.15,Neutral
+CHF/USD,Forex,3.08,Neutral
+USD/CHF,Macro,3.08,Neutral
+AUD/USD,Forex,3.06,Neutral

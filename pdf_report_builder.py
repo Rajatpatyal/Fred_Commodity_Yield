@@ -9,7 +9,10 @@ from reportlab.platypus import (
 )
 
 from reportlab.lib import colors
-from reportlab.lib.styles import getSampleStyleSheet
+
+from reportlab.lib.styles import (
+    getSampleStyleSheet
+)
 
 from datetime import datetime
 
@@ -18,19 +21,204 @@ class PDFReportBuilder:
 
     def __init__(self):
 
-        self.styles = (
-            getSampleStyleSheet()
+        self.styles = getSampleStyleSheet()
+
+    # =====================================
+    # TABLE HELPER
+    # =====================================
+
+    def dataframe_table(
+
+        self,
+
+        df,
+
+        header_color=colors.lightblue
+
+    ):
+
+        if df is None or len(df) == 0:
+
+            return Paragraph(
+
+                "No data available",
+
+                self.styles["BodyText"]
+
+            )
+
+        data = [
+
+            df.columns.tolist()
+
+        ]
+
+        for _, row in df.iterrows():
+
+            data.append(
+
+                row.astype(str).tolist()
+
+            )
+
+        table = Table(data)
+
+        table.setStyle(
+
+            TableStyle([
+
+                (
+                    "BACKGROUND",
+                    (0, 0),
+                    (-1, 0),
+                    header_color
+                ),
+
+                (
+                    "GRID",
+                    (0, 0),
+                    (-1, -1),
+                    1,
+                    colors.black
+                ),
+
+                (
+                    "FONTSIZE",
+                    (0, 0),
+                    (-1, -1),
+                    8
+                ),
+
+                (
+                    "VALIGN",
+                    (0, 0),
+                    (-1, -1),
+                    "MIDDLE"
+                ),
+
+                (
+                    "ROWBACKGROUNDS",
+                    (0, 1),
+                    (-1, -1),
+                    [colors.white, colors.whitesmoke]
+                )
+
+            ])
+
         )
 
-    # ==========================================
+        return table
+    
+        # =====================================
+    # EXECUTIVE DASHBOARD
+    # =====================================
+
+    def executive_dashboard_section(
+
+        self,
+
+        opportunities,
+
+        macro_score,
+
+        risk_score
+
+    ):
+
+        styles = self.styles
+
+        elements = []
+
+        elements.append(
+
+            Paragraph(
+
+                "Executive Dashboard",
+
+                styles["Title"]
+
+            )
+
+        )
+
+        elements.append(
+            Spacer(1, 20)
+        )
+
+        dashboard_text = f"""
+
+        <b>Macro Score:</b> {macro_score}<br/>
+        <b>Risk Score:</b> {risk_score}<br/><br/>
+
+        <b>Top Opportunities</b><br/><br/>
+
+        """
+
+        top10 = opportunities.head(10)
+
+        rank = 1
+
+        for _, row in top10.iterrows():
+
+            dashboard_text += (
+
+                f"{rank}. "
+
+                f"{row['Asset']} "
+
+                f"({row['Category']}) "
+
+                f"Score={row['Score']}<br/>"
+
+            )
+
+            rank += 1
+
+        dashboard_text += """
+
+        <br/><br/>
+
+        <b>Report Highlights</b><br/>
+
+        • Commodity-focused macro strategy<br/>
+        • Precious metals inflation hedge<br/>
+        • Agriculture momentum opportunities<br/>
+        • Industrial metals growth indicators<br/>
+        • Equity and Forex monitoring dashboard<br/>
+
+        """
+
+        elements.append(
+
+            Paragraph(
+
+                dashboard_text,
+
+                styles["BodyText"]
+
+            )
+
+        )
+
+        elements.append(
+            PageBreak()
+        )
+
+        return elements
+    
+        # =====================================
     # BUILD REPORT
-    # ==========================================
+    # =====================================
 
     def build_report(
 
         self,
 
         snapshot,
+
+        metals,
+
+        forex,
 
         spreads,
 
@@ -41,6 +229,10 @@ class PDFReportBuilder:
         commentary,
 
         chart_files,
+
+        macro_score,
+
+        risk_score,
 
         output_file
 
@@ -54,15 +246,20 @@ class PDFReportBuilder:
 
         elements = []
 
-        # ======================================
+        # =====================================
         # COVER PAGE
-        # ======================================
+        # =====================================
 
         elements.append(
+
             Paragraph(
-                "Global Macro Intelligence Report",
+
+                "GLOBAL MACRO INTELLIGENCE REPORT",
+
                 styles["Title"]
+
             )
+
         )
 
         elements.append(
@@ -70,10 +267,31 @@ class PDFReportBuilder:
         )
 
         elements.append(
+
             Paragraph(
-                "Commodities • Agriculture • Bonds • Equities • Macro Economics",
+
+                "Commodity, Metals, Agriculture, Forex and Equity Intelligence",
+
                 styles["Heading2"]
+
             )
+
+        )
+
+        elements.append(
+            Spacer(1, 30)
+        )
+
+        elements.append(
+
+            Paragraph(
+
+                f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M')}",
+
+                styles["Normal"]
+
+            )
+
         )
 
         elements.append(
@@ -81,84 +299,837 @@ class PDFReportBuilder:
         )
 
         elements.append(
+
             Paragraph(
-                f"Generated: {datetime.now()}",
-                styles["Normal"]
+
+                """
+
+                This report combines commodity,
+                precious metals, industrial metals,
+                agriculture, livestock, foreign exchange,
+                fixed income and equity market intelligence
+                into a unified macroeconomic dashboard.
+
+                """,
+
+                styles["BodyText"]
+
             )
+
         )
 
         elements.append(
             PageBreak()
         )
 
-        # ======================================
-        # EXECUTIVE SUMMARY
-        # ======================================
+        # =====================================
+        # EXECUTIVE DASHBOARD
+        # =====================================
+
+        elements.extend(
+
+            self.executive_dashboard_section(
+
+                opportunities,
+
+                macro_score,
+
+                risk_score
+
+            )
+
+        )
+
+        # =====================================
+        # MARKET COMMENTARY
+        # =====================================
 
         elements.append(
+
             Paragraph(
-                "Executive Summary",
+
+                "Market Commentary",
+
                 styles["Heading1"]
+
             )
+
         )
 
         elements.append(
 
             Paragraph(
-                commentary,
+
+                commentary.replace(
+                    "\n",
+                    "<br/>"
+                ),
+
                 styles["BodyText"]
+
             )
 
         )
 
         elements.append(
-            Spacer(1,20)
+            PageBreak()
         )
 
-        # ======================================
-        # MARKET SNAPSHOT
-        # ======================================
+        # =====================================
+        # TRADE IDEAS
+        # =====================================
 
         elements.append(
+
             Paragraph(
-                "Market Snapshot",
+
+                "Trade Ideas",
+
                 styles["Heading1"]
+
             )
+
         )
 
-        snapshot_table = [
+        elements.append(
 
-            snapshot.columns.tolist()
+            Paragraph(
+
+                """
+
+                The following opportunities are
+                generated from spread analytics,
+                relative value relationships and
+                macroeconomic conditions.
+
+                """,
+
+                styles["BodyText"]
+
+            )
+
+        )
+
+        elements.append(
+            Spacer(1, 10)
+        )
+
+        if len(trade_ideas) > 0:
+
+            elements.append(
+
+                self.dataframe_table(
+
+                    trade_ideas,
+
+                    colors.yellow
+
+                )
+
+            )
+
+        else:
+
+            elements.append(
+
+                Paragraph(
+
+                    "No trade ideas generated.",
+
+                    styles["BodyText"]
+
+                )
+
+            )
+
+        elements.append(
+            PageBreak()
+        )
+
+        # =====================================
+        # GLOBAL MACRO ENVIRONMENT
+        # =====================================
+
+            # =====================================
+        # ENERGY MARKETS
+        # =====================================
+
+        energy = snapshot[
+
+            snapshot["Asset"].isin([
+
+                "WTI Crude",
+
+                "Natural Gas"
+
+            ])
 
         ]
 
-        for _, row in snapshot.iterrows():
+        elements.append(
 
-            snapshot_table.append(
+            Paragraph(
 
-                row.astype(str).tolist()
+                "Energy Markets",
+
+                styles["Heading1"]
 
             )
 
-        table = Table(
-            snapshot_table
         )
 
-        table.setStyle(
+        elements.append(
+
+            Paragraph(
+
+                """
+
+                Energy markets are among the most
+                important drivers of inflation,
+                transportation costs and industrial activity.
+
+                WTI Crude reflects global oil demand
+                while Natural Gas remains a key input
+                for power generation and manufacturing.
+
+                """,
+
+                styles["BodyText"]
+
+            )
+
+        )
+
+        elements.append(
+            Spacer(1, 10)
+        )
+
+        elements.append(
+
+            self.dataframe_table(
+
+                energy,
+
+                colors.lightyellow
+
+            )
+
+        )
+
+        elements.append(
+            PageBreak()
+        )
+
+        # =====================================
+        # PRECIOUS METALS
+        # =====================================
+
+        elements.append(
+
+            Paragraph(
+
+                "Precious Metals",
+
+                styles["Heading1"]
+
+            )
+
+        )
+
+        elements.append(
+
+            Paragraph(
+
+                """
+
+                Precious metals provide
+                inflation protection,
+                portfolio diversification
+                and safe-haven characteristics.
+
+                Gold and Silver remain the
+                primary monetary metals,
+                while Platinum and Palladium
+                are heavily influenced by
+                industrial demand.
+
+                """,
+
+                styles["BodyText"]
+
+            )
+
+        )
+
+        elements.append(
+            Spacer(1, 10)
+        )
+
+        elements.append(
+
+            self.dataframe_table(
+
+                metals,
+
+                colors.lightgrey
+
+            )
+
+        )
+
+        elements.append(
+            PageBreak()
+        )
+
+        # =====================================
+        # INDUSTRIAL METALS
+        # =====================================
+
+        industrial = snapshot[
+
+            snapshot["Asset"].isin([
+
+                "Copper",
+
+                "Aluminum",
+
+                "Nickel",
+
+                "Zinc",
+
+                "Lead",
+
+                "Tin"
+
+            ])
+
+        ]
+
+        elements.append(
+
+            Paragraph(
+
+                "Industrial Metals",
+
+                styles["Heading1"]
+
+            )
+
+        )
+
+        elements.append(
+
+            Paragraph(
+
+                """
+
+                Industrial metals often serve
+                as leading indicators of
+                manufacturing activity and
+                economic growth.
+
+                Copper remains one of the most
+                closely watched indicators
+                of global industrial demand.
+
+                """,
+
+                styles["BodyText"]
+
+            )
+
+        )
+
+        elements.append(
+            Spacer(1, 10)
+        )
+
+        elements.append(
+
+            self.dataframe_table(
+
+                industrial,
+
+                colors.lightblue
+
+            )
+
+        )
+
+        elements.append(
+            PageBreak()
+        )
+
+            # =====================================
+        # AGRICULTURE MARKETS
+        # =====================================
+
+        agriculture = snapshot[
+
+            snapshot["Asset"].isin([
+
+                "Corn",
+                "Wheat",
+                "Soybeans",
+                "Cotton",
+                "Sugar",
+                "Coffee",
+                "Rice",
+                "Barley"
+
+            ])
+
+        ]
+
+        elements.append(
+
+            Paragraph(
+
+                "Agriculture Markets",
+
+                styles["Heading1"]
+
+            )
+
+        )
+
+        elements.append(
+
+            Paragraph(
+
+                """
+
+                Agricultural commodities are
+                essential to global food security,
+                livestock feed production and biofuels.
+
+                Soybeans, Corn and Wheat remain the
+                most actively monitored agricultural
+                benchmarks globally.
+
+                Coffee, Sugar and Cotton provide
+                insight into soft commodity trends.
+
+                """,
+
+                styles["BodyText"]
+
+            )
+
+        )
+
+        elements.append(
+            Spacer(1, 10)
+        )
+
+        elements.append(
+
+            self.dataframe_table(
+
+                agriculture,
+
+                colors.lightgreen
+
+            )
+
+        )
+
+        elements.append(
+            PageBreak()
+        )
+
+        # =====================================
+        # LIVESTOCK MARKETS
+        # =====================================
+
+        livestock = snapshot[
+
+            snapshot["Asset"].isin([
+
+                "Beef",
+                "Pork",
+                "Milk",
+                "Eggs",
+                "Poultry"
+
+            ])
+
+        ]
+
+        if len(livestock) > 0:
+
+            elements.append(
+
+                Paragraph(
+
+                    "Livestock Markets",
+
+                    styles["Heading1"]
+
+                )
+
+            )
+
+            elements.append(
+
+                Paragraph(
+
+                    """
+
+                    Livestock markets reflect
+                    protein demand, feed costs,
+                    agricultural profitability
+                    and consumer spending trends.
+
+                    Beef and Pork remain key
+                    livestock indicators.
+
+                    """,
+
+                    styles["BodyText"]
+
+                )
+
+            )
+
+            elements.append(
+                Spacer(1, 10)
+            )
+
+            elements.append(
+
+                self.dataframe_table(
+
+                    livestock,
+
+                    colors.salmon
+
+                )
+
+            )
+
+            elements.append(
+                PageBreak()
+            )
+
+        # =====================================
+        # EQUITY MARKETS
+        # =====================================
+
+        equities = snapshot[
+
+            snapshot["Asset"].isin([
+
+                "NASDAQ",
+
+                "S&P 500",
+
+                "Dow Jones",
+
+                "VIX"
+
+            ])
+
+        ]
+
+        elements.append(
+
+            Paragraph(
+
+                "Equity Markets",
+
+                styles["Heading1"]
+
+            )
+
+        )
+
+        elements.append(
+
+            Paragraph(
+
+                """
+
+                Equity markets provide a broad
+                indication of economic growth,
+                liquidity conditions and
+                investor sentiment.
+
+                NASDAQ remains the leading
+                technology benchmark globally.
+
+                The S&P 500 reflects broad
+                US corporate performance,
+                while the Dow Jones tracks
+                industrial leadership.
+
+                VIX measures expected market volatility.
+
+                """,
+
+                styles["BodyText"]
+
+            )
+
+        )
+
+        elements.append(
+            Spacer(1, 10)
+        )
+
+        elements.append(
+
+            self.dataframe_table(
+
+                equities,
+
+                colors.lightgrey
+
+            )
+
+        )
+
+        elements.append(
+            PageBreak()
+        )
+
+        # =====================================
+        # FOREIGN EXCHANGE MARKETS
+        # =====================================
+
+        elements.append(
+
+            Paragraph(
+
+                "Foreign Exchange Markets",
+
+                styles["Heading1"]
+
+            )
+
+        )
+
+        elements.append(
+
+            Paragraph(
+
+                """
+
+                Currency markets influence
+                global trade flows,
+                commodity pricing,
+                inflation and capital allocation.
+
+                The US Dollar Index remains
+                one of the most influential
+                macroeconomic indicators globally.
+
+                Monitoring major currency pairs
+                helps identify shifts in
+                economic and monetary policy trends.
+
+                """,
+
+                styles["BodyText"]
+
+            )
+
+        )
+
+        elements.append(
+            Spacer(1, 10)
+        )
+
+        elements.append(
+
+            self.dataframe_table(
+
+                forex,
+
+                colors.lightgrey
+
+            )
+
+        )
+
+        elements.append(
+            PageBreak()
+        )    
+
+            # =====================================
+        # SPREAD ANALYTICS
+        # =====================================
+
+        elements.append(
+
+            Paragraph(
+
+                "Spread Analytics",
+
+                styles["Heading1"]
+
+            )
+
+        )
+
+        elements.append(
+
+            Paragraph(
+
+                """
+
+                Spread analytics identify
+                relative value opportunities
+                across commodities,
+                currencies and fixed income.
+
+                These relationships often
+                highlight emerging trends
+                before they become visible
+                in outright prices.
+
+                """,
+
+                styles["BodyText"]
+
+            )
+
+        )
+
+        elements.append(
+            Spacer(1, 10)
+        )
+
+        elements.append(
+
+            self.dataframe_table(
+
+                spreads,
+
+                colors.yellow
+
+            )
+
+        )
+
+        elements.append(
+            PageBreak()
+        )
+
+        # =====================================
+        # OPPORTUNITY RANKINGS
+        # =====================================
+
+        elements.append(
+
+            Paragraph(
+
+                "Top 20 Opportunities",
+
+                styles["Heading1"]
+
+            )
+
+        )
+
+        elements.append(
+
+            Paragraph(
+
+                """
+
+                Opportunity scores combine
+                macroeconomic conditions,
+                relative strength,
+                spread relationships
+                and market momentum.
+
+                Higher scores indicate
+                stronger risk/reward profiles.
+
+                """,
+
+                styles["BodyText"]
+
+            )
+
+        )
+
+        elements.append(
+            Spacer(1, 10)
+        )
+
+        elements.append(
+
+            self.dataframe_table(
+
+                opportunities.head(20),
+
+                colors.orange
+
+            )
+
+        )
+
+        elements.append(
+            PageBreak()
+        )
+
+        # =====================================
+        # PORTFOLIO ALLOCATION
+        # =====================================
+
+        elements.append(
+
+            Paragraph(
+
+                "Portfolio Allocation Model",
+
+                styles["Heading1"]
+
+            )
+
+        )
+
+        allocation_data = [
+
+            ["Asset Class", "Suggested Allocation"],
+
+            ["Precious Metals", "20%"],
+
+            ["Industrial Metals", "15%"],
+
+            ["Agriculture", "15%"],
+
+            ["Energy", "15%"],
+
+            ["Equities", "20%"],
+
+            ["Forex", "10%"],
+
+            ["Cash", "5%"]
+
+        ]
+
+        allocation_table = Table(
+            allocation_data
+        )
+
+        allocation_table.setStyle(
 
             TableStyle([
 
                 (
                     "BACKGROUND",
-                    (0,0),
-                    (-1,0),
+                    (0, 0),
+                    (-1, 0),
                     colors.lightblue
                 ),
 
                 (
                     "GRID",
-                    (0,0),
-                    (-1,-1),
+                    (0, 0),
+                    (-1, -1),
                     1,
                     colors.black
                 )
@@ -167,322 +1138,297 @@ class PDFReportBuilder:
 
         )
 
-        elements.append(table)
+        elements.append(
+            allocation_table
+        )
 
         elements.append(
             PageBreak()
         )
 
-        # ======================================
-        # SPREAD ANALYSIS
-        # ======================================
+        # =====================================
+        # VISUAL ANALYTICS
+        # =====================================
 
         elements.append(
+
             Paragraph(
-                "Spread Analysis",
-                styles["Heading1"]
-            )
-        )
 
-        spread_table = [
-
-            spreads.columns.tolist()
-
-        ]
-
-        for _, row in spreads.iterrows():
-
-            spread_table.append(
-
-                row.astype(str).tolist()
-
-            )
-
-        table = Table(
-            spread_table
-        )
-
-        table.setStyle(
-
-            TableStyle([
-
-                (
-                    "BACKGROUND",
-                    (0,0),
-                    (-1,0),
-                    colors.lightgreen
-                ),
-
-                (
-                    "GRID",
-                    (0,0),
-                    (-1,-1),
-                    1,
-                    colors.black
-                )
-
-            ])
-
-        )
-
-        elements.append(table)
-
-        elements.append(
-            PageBreak()
-        )
-
-        # ======================================
-        # OPPORTUNITY RANKING
-        # ======================================
-
-        elements.append(
-            Paragraph(
-                "Top Macro Opportunities",
-                styles["Heading1"]
-            )
-        )
-
-        top20 = (
-            opportunities
-            .head(20)
-        )
-
-        opp_table = [
-
-            top20.columns.tolist()
-
-        ]
-
-        for _, row in top20.iterrows():
-
-            opp_table.append(
-
-                row.astype(str).tolist()
-
-            )
-
-        table = Table(
-            opp_table
-        )
-
-        table.setStyle(
-
-            TableStyle([
-
-                (
-                    "BACKGROUND",
-                    (0,0),
-                    (-1,0),
-                    colors.orange
-                ),
-
-                (
-                    "GRID",
-                    (0,0),
-                    (-1,-1),
-                    1,
-                    colors.black
-                )
-
-            ])
-
-        )
-
-        elements.append(table)
-
-        elements.append(
-            PageBreak()
-        )
-
-        # ======================================
-        # TRADE IDEAS
-        # ======================================
-
-        elements.append(
-            Paragraph(
-                "Trade Ideas",
-                styles["Heading1"]
-            )
-        )
-
-        if len(trade_ideas) > 0:
-
-            trade_table = [
-
-                trade_ideas.columns.tolist()
-
-            ]
-
-            for _, row in trade_ideas.iterrows():
-
-                trade_table.append(
-
-                    row.astype(str).tolist()
-
-                )
-
-            table = Table(
-                trade_table
-            )
-
-            table.setStyle(
-
-                TableStyle([
-
-                    (
-                        "BACKGROUND",
-                        (0,0),
-                        (-1,0),
-                        colors.yellow
-                    ),
-
-                    (
-                        "GRID",
-                        (0,0),
-                        (-1,-1),
-                        1,
-                        colors.black
-                    )
-
-                ])
-
-            )
-
-            elements.append(table)
-
-        elements.append(
-            PageBreak()
-        )
-
-        # ======================================
-        # CHARTS
-        # ======================================
-
-        elements.append(
-            Paragraph(
                 "Visual Analytics",
+
                 styles["Heading1"]
+
             )
+
+        )
+
+        elements.append(
+
+            Paragraph(
+
+                """
+
+                The following charts provide
+                graphical insight into
+                macroeconomic conditions,
+                commodities,
+                metals,
+                agriculture,
+                forex and equity markets.
+
+                """,
+
+                styles["BodyText"]
+
+            )
+
+        )
+
+        elements.append(
+            Spacer(1, 10)
         )
 
         for chart in chart_files:
 
-            elements.append(
+            try:
 
-                Paragraph(
-                    chart,
-                    styles["Heading2"]
+                chart_name = (
+
+                    chart
+                    .replace(".png", "")
+                    .replace("_", " ")
+                    .title()
+
                 )
 
-            )
+                elements.append(
 
-            elements.append(
+                    Paragraph(
 
-                Image(
-                    chart,
-                    width=500,
-                    height=280
+                        chart_name,
+
+                        styles["Heading2"]
+
+                    )
+
                 )
 
-            )
+                elements.append(
 
-            elements.append(
-                Spacer(1,20)
-            )
+                    Image(
 
-        # ======================================
-        # RECOMMENDATIONS
-        # ======================================
+                        chart,
+
+                        width=500,
+
+                        height=280
+
+                    )
+
+                )
+
+                elements.append(
+                    Spacer(1, 15)
+                )
+
+            except Exception:
+
+                continue
 
         elements.append(
             PageBreak()
         )
 
+        # =====================================
+        # APPENDIX A
+        # =====================================
+
         elements.append(
+
             Paragraph(
-                "Strategic Recommendations",
+
+                "Appendix A - Complete Market Snapshot",
+
                 styles["Heading1"]
+
             )
+
+        )
+
+        elements.append(
+
+            self.dataframe_table(
+
+                snapshot,
+
+                colors.white
+
+            )
+
+        )
+
+        elements.append(
+            PageBreak()
+        )
+
+        # =====================================
+        # APPENDIX B
+        # =====================================
+
+        elements.append(
+
+            Paragraph(
+
+                "Appendix B - Spread Analytics",
+
+                styles["Heading1"]
+
+            )
+
+        )
+
+        elements.append(
+
+            self.dataframe_table(
+
+                spreads,
+
+                colors.white
+
+            )
+
+        )
+
+        elements.append(
+            PageBreak()
+        )
+
+        # =====================================
+        # STRATEGIC RECOMMENDATIONS
+        # =====================================
+
+        elements.append(
+
+            Paragraph(
+
+                "Strategic Recommendations",
+
+                styles["Heading1"]
+
+            )
+
         )
 
         recommendations = """
 
-1. Monitor Energy Markets closely as Oil/Gas ratios remain elevated.
+        <b>Precious Metals</b><br/>
+        Gold and Silver continue to provide
+        diversification and inflation protection.
 
-2. Track Agricultural Spreads including Soybean/Corn and Wheat/Corn.
+        <br/><br/>
 
-3. Monitor Yield Curve dynamics for recession or growth signals.
+        <b>Industrial Metals</b><br/>
+        Copper and Nickel remain important
+        indicators of economic growth.
 
-4. Watch Copper as a leading indicator of industrial growth.
+        <br/><br/>
 
-5. Maintain diversified exposure across commodities, equities and fixed income.
+        <b>Agriculture</b><br/>
+        Soybeans, Coffee and Rice remain
+        among the strongest agricultural markets.
 
-6. Monitor inflation and interest rates for macro regime shifts.
+        <br/><br/>
 
-"""
+        <b>Energy</b><br/>
+        Monitor WTI Crude and Natural Gas
+        for inflationary pressure signals.
+
+        <br/><br/>
+
+        <b>Equities</b><br/>
+        NASDAQ continues to lead
+        technology and growth exposure.
+
+        <br/><br/>
+
+        <b>Forex</b><br/>
+        Monitor the US Dollar Index
+        for global liquidity trends.
+
+        """
 
         elements.append(
 
             Paragraph(
+
                 recommendations,
+
                 styles["BodyText"]
+
             )
 
         )
-
-        # ======================================
-        # DISCLAIMER
-        # ======================================
 
         elements.append(
             PageBreak()
         )
 
+        # =====================================
+        # DISCLAIMER
+        # =====================================
+
         elements.append(
+
             Paragraph(
+
                 "Disclaimer",
+
                 styles["Heading1"]
+
             )
+
         )
-
-        disclaimer = """
-
-This report is intended for educational,
-research and portfolio demonstration purposes only.
-
-It does not constitute investment advice,
-financial advice, trading advice or
-a recommendation to buy or sell securities,
-commodities, currencies or derivatives.
-
-Always perform independent due diligence.
-
-"""
 
         elements.append(
 
             Paragraph(
-                disclaimer,
+
+                """
+
+                This report is intended for
+                educational, informational
+                and research purposes only.
+
+                It does not constitute
+                investment advice,
+                financial advice,
+                legal advice or tax advice.
+
+                Users should perform
+                independent due diligence
+                before making investment decisions.
+
+                Past performance does not
+                guarantee future results.
+
+                """,
+
                 styles["BodyText"]
+
             )
 
         )
 
-        # ======================================
-        # BUILD
-        # ======================================
+        # =====================================
+        # BUILD PDF
+        # =====================================
 
         doc.build(
             elements
         )
 
         print(
-            f"PDF Saved: {output_file}"
-        )
 
+            f"PDF saved successfully: {output_file}"
 
-if __name__ == "__main__":
-
-    print(
-        "PDF Report Builder Loaded"
-    )
+        )    
