@@ -2,35 +2,46 @@
 
 ## Overview
 
-Global Macro Intelligence Platform is an institutional-grade macroeconomic analytics and decision-support platform built in Python.
+Global Macro Intelligence Platform is an institutional-grade macroeconomic analytics, market intelligence, and automated reporting platform built entirely in Python.
 
-The platform integrates macroeconomic indicators, commodities, precious metals, industrial metals, agricultural markets, livestock markets, foreign exchange markets, fixed income securities, equity indices, and weather intelligence into a unified analytics framework.
+The platform integrates macroeconomic indicators, commodities, precious metals, foreign exchange markets, fixed income securities, equity indices, and weather intelligence into a unified decision-support framework.
 
-Using data from the Federal Reserve Economic Data (FRED) API, Open-Meteo Weather API, and extensible external data sources such as USDA and market intelligence feeds, the platform performs advanced spread analytics, opportunity ranking, macroeconomic scoring, trade idea generation, dashboard visualization, and automated PDF report generation.
+Using data sourced from the Federal Reserve Economic Data (FRED) API and Open-Meteo Weather API, the platform performs spread analytics, opportunity ranking, macroeconomic scoring, trade idea generation, dashboard visualization, and institutional PDF report creation.
 
-The solution is designed for:
+The platform is designed for:
 
 * Portfolio Managers
 * Commodity Traders
 * Hedge Funds
-* Economic Researchers
 * Financial Analysts
+* Economic Researchers
 * Data Scientists
 * Investment Advisors
 * Academic Researchers
 
-The platform transforms raw economic and market data into actionable macroeconomic intelligence.
+The goal is simple:
+
+Transform raw economic and market data into actionable macroeconomic intelligence.
 
 ---
 
-# Core Capabilities
+# Key Features
+
+## Executive Market Intelligence
+
+* Executive Dashboard
+* Opportunity Ranking Dashboard
+* Macro Risk Monitoring
+* Trade Idea Generation
+* Institutional Commentary
+* Strategic Recommendations
 
 ## Energy Markets
 
 * WTI Crude Oil
 * Natural Gas
-* Oil/Gas Ratio Analysis
-* Energy Relative Strength Monitoring
+* Oil / Gas Relative Value Analysis
+* Energy Opportunity Ranking
 
 ## Precious Metals
 
@@ -38,21 +49,15 @@ The platform transforms raw economic and market data into actionable macroeconom
 * Silver
 * Platinum
 * Palladium
-* Gold/Silver Ratio Analysis
-* Precious Metals Opportunity Ranking
 
-## Industrial Metals
+Analytics include:
 
-* Copper
-* Aluminum
-* Nickel
-* Zinc
-* Lead
-* Tin
+* Gold / Silver Ratio
+* Platinum / Gold Ratio
+* Palladium / Platinum Ratio
+* Precious Metals Opportunity Scoring
 
-Industrial metals serve as leading indicators of global manufacturing and economic activity.
-
-## Agriculture Markets
+## Agricultural Markets
 
 * Corn
 * Wheat
@@ -60,29 +65,14 @@ Industrial metals serve as leading indicators of global manufacturing and econom
 * Cotton
 * Sugar
 * Coffee
-* Rice
-* Barley
 
 Analytics include:
 
-* Agricultural Spread Analysis
-* Relative Value Models
-* Crop Market Monitoring
-* Agricultural Momentum Signals
-
-## Livestock Markets
-
-* Beef
-* Pork
-* Milk
-* Eggs
-* Poultry
-
-Analytics include:
-
-* Livestock Spread Analysis
-* Protein Market Monitoring
-* Feed Cost Impact Assessment
+* Wheat / Corn Ratio
+* Soybean / Corn Ratio
+* Cotton / Corn Ratio
+* Coffee / Sugar Ratio
+* Agricultural Opportunity Ranking
 
 ## Equity Markets
 
@@ -93,8 +83,8 @@ Analytics include:
 
 Analytics include:
 
-* Equity Strength Ranking
-* Volatility Monitoring
+* Equity Market Monitoring
+* Volatility Analysis
 * Risk Appetite Assessment
 
 ## Foreign Exchange Markets
@@ -102,18 +92,13 @@ Analytics include:
 * USD/INR
 * EUR/USD
 * GBP/USD
-* JPY/USD
-* CHF/USD
-* CAD/USD
-* AUD/USD
-* KRW/USD
-* US Dollar Index
+* USD/JPY
 
 Analytics include:
 
-* Currency Relative Value Analysis
+* Currency Strength Analysis
+* Relative Value Analysis
 * Dollar Strength Monitoring
-* Global Liquidity Indicators
 
 ## Fixed Income Markets
 
@@ -124,8 +109,9 @@ Analytics include:
 Analytics include:
 
 * Yield Curve Analysis
-* Recession Monitoring
-* Interest Rate Environment Assessment
+* 10Y–2Y Spread
+* 30Y–10Y Spread
+* Recession Risk Monitoring
 
 ## Macroeconomic Indicators
 
@@ -135,122 +121,326 @@ Analytics include:
 
 Analytics include:
 
-* Macro Risk Scoring
-* Macro Regime Classification
+* Macro Score
+* Risk Score
 * Inflation Monitoring
-* Monetary Policy Analysis
+* Monetary Policy Assessment
 
 ## Weather Intelligence
 
 * Temperature
 * Precipitation
 * Wind Speed
-* Agricultural Weather Risk Score
+* Agriculture Risk Factors
 
-Weather analytics can be integrated with crop and commodity analysis.
+Weather intelligence can be incorporated into future crop and agricultural analysis models.
+
+---
+
+# Platform Architecture
+
+```text
+FRED API
+    │
+    ▼
+fred_downloader.py
+    │
+    ▼
+weather_downloader.py
+    │
+    ▼
+spread_analytics.py
+    │
+    ▼
+opportunity_engine.py
+    │
+    ▼
+chart_generator.py
+    │
+    ▼
+pdf_report_builder.py
+    │
+    ▼
+main.py
+    │
+    ▼
+Outputs
+```
+
+---
+
+# Analytics Modules
 
 ## Spread Analytics
 
 The platform automatically calculates:
 
-### Precious Metals
-
-* Gold/Silver Ratio
-* Platinum/Gold Ratio
-* Palladium/Platinum Ratio
-
 ### Energy
 
-* Oil/Gas Ratio
+* Oil / Gas Ratio
 
 ### Agriculture
 
-* Wheat/Corn Ratio
-* Soybean/Corn Ratio
-* Cotton/Corn Ratio
-* Coffee/Sugar Ratio
-* Rice/Corn Ratio
+* Wheat / Corn Ratio
+* Soybean / Corn Ratio
+* Cotton / Corn Ratio
+* Coffee / Sugar Ratio
 
-### Livestock
+### Precious Metals
 
-* Beef/Pork Ratio
+* Gold / Silver Ratio
+* Platinum / Gold Ratio
+* Palladium / Platinum Ratio
 
 ### Fixed Income
 
-* 10Y–2Y Treasury Spread
-* 30Y–10Y Treasury Spread
+* 10Y – 2Y Treasury Spread
+* 30Y – 10Y Treasury Spread
 
 ### Foreign Exchange
 
-* EURUSD/GBPUSD
-* USDINR/JPYUSD
+* EURUSD / GBPUSD
+* USDINR / USDJPY
 
-Each spread generates relative-value signals and trade opportunities.
+These spreads help identify:
+
+* Relative Value Opportunities
+* Inflation Signals
+* Economic Growth Expectations
+* Risk-On / Risk-Off Market Regimes
+
+---
 
 ## Opportunity Engine
 
-The Opportunity Engine ranks all monitored assets using:
+The Opportunity Engine ranks assets using a standardized scoring framework.
 
-* Relative Strength Models
-* Spread Analytics
-* Inflation Regime Analysis
-* Dollar Strength Analysis
+Current output fields:
+
+```text
+Asset
+Category
+Score
+Reason
+```
+
+Factors considered:
+
+* Relative Strength
+* Commodity Momentum
 * Yield Curve Signals
-* Commodity Momentum Indicators
+* Inflation Trends
+* Dollar Strength
+* Market Volatility
+* Macro Regime Indicators
 
 Outputs include:
 
-* Opportunity Scores
-* Top Opportunity Rankings
-* Trade Recommendations
-* Institutional Commentary
+* Opportunity Rankings
+* Trade Ideas
+* Market Commentary
+* Strategic Recommendations
 
-## Institutional Reporting
+---
 
-The platform automatically generates:
+# Institutional Reporting
 
-### CSV Outputs
+The platform automatically generates a comprehensive institutional report.
 
-* macro_snapshot.csv
-* precious_metals.csv
-* forex_snapshot.csv
-* macro_spreads.csv
-* opportunities.csv
-* trade_ideas.csv
-
-### Dashboards
-
-* Macro Dashboard
-* Commodity Dashboard
-* Metals Dashboard
-* Agriculture Dashboard
-* Equity Dashboard
-* Forex Dashboard
-* Opportunity Dashboard
-
-### PDF Reports
-
-Global_Macro_Intelligence_Report.pdf
-
-The report includes:
+## Included Sections
 
 * Executive Dashboard
-* Market Commentary
-* Trade Ideas
-* Energy Analysis
+* Opportunity Rankings
+* Commodity Analysis
 * Precious Metals Analysis
-* Industrial Metals Analysis
 * Agriculture Analysis
-* Livestock Analysis
 * Equity Analysis
 * Forex Analysis
 * Spread Analytics
-* Opportunity Rankings
-* Portfolio Allocation Model
-* Visual Analytics
-* Strategic Recommendations
+* Trade Ideas
+* Commentary
+* Strategic Outlook
 
-## Technology Stack
+---
+
+# Dashboards Generated
+
+## Executive Dashboard
+
+Executive summary of market conditions and macro environment.
+
+## Opportunity Dashboard
+
+Top-ranked investment opportunities across all monitored assets.
+
+## Commodity Dashboard
+
+Energy and commodity market overview.
+
+## Precious Metals Dashboard
+
+Gold, Silver, Platinum, and Palladium monitoring.
+
+## Agriculture Dashboard
+
+Agricultural market intelligence and crop-related analytics.
+
+## Forex Dashboard
+
+Major currency pair analysis.
+
+---
+
+# Generated Outputs
+
+## CSV Files
+
+```text
+macro_snapshot.csv
+precious_metals.csv
+forex_snapshot.csv
+macro_spreads.csv
+opportunities.csv
+trade_ideas.csv
+```
+
+## Charts
+
+```text
+executive_dashboard.png
+commodity_dashboard.png
+precious_metals_dashboard.png
+agriculture_dashboard.png
+forex_dashboard.png
+opportunity_dashboard.png
+```
+
+## Reports
+
+```text
+Global_Macro_Intelligence_Report.pdf
+```
+
+---
+
+# GitHub Pages Integration
+
+The project includes a professional GitHub Pages website displaying:
+
+* Executive Dashboard
+* Opportunity Rankings
+* Commodity Dashboard
+* Precious Metals Dashboard
+* Agriculture Dashboard
+* Forex Dashboard
+* Downloadable PDF Report
+
+Example deployment:
+
+https://rajatpatyal.github.io/Fred_Commodity_Yield/
+
+---
+
+# Project Structure
+
+```text
+Fred_Commodity_Yield/
+
+├── fred_downloader.py
+├── weather_downloader.py
+├── spread_analytics.py
+├── opportunity_engine.py
+├── chart_generator.py
+├── pdf_report_builder.py
+├── main.py
+├── requirements.txt
+├── README.md
+├── index.html
+├── .gitignore
+
+└── output/
+
+    ├── macro_snapshot.csv
+    ├── precious_metals.csv
+    ├── forex_snapshot.csv
+    ├── macro_spreads.csv
+    ├── opportunities.csv
+    ├── trade_ideas.csv
+
+    ├── charts/
+
+    │   ├── executive_dashboard.png
+    │   ├── commodity_dashboard.png
+    │   ├── precious_metals_dashboard.png
+    │   ├── agriculture_dashboard.png
+    │   ├── forex_dashboard.png
+    │   └── opportunity_dashboard.png
+
+    └── Global_Macro_Intelligence_Report.pdf
+```
+
+---
+
+# Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/<username>/Fred_Commodity_Yield.git
+
+cd Fred_Commodity_Yield
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# Configuration
+
+Set your FRED API key:
+
+```bash
+export FRED_API_KEY=YOUR_FRED_API_KEY
+```
+
+Python:
+
+```python
+import os
+
+API_KEY = os.getenv(
+    "FRED_API_KEY"
+)
+```
+
+---
+
+# Running the Platform
+
+Execute:
+
+```bash
+python main.py
+```
+
+The platform will:
+
+1. Download macroeconomic data
+2. Download weather data
+3. Calculate spreads
+4. Generate opportunities
+5. Create trade ideas
+6. Generate dashboards
+7. Build PDF report
+8. Update GitHub Pages assets
+
+---
+
+# Technology Stack
 
 * Python
 * Pandas
@@ -261,25 +451,37 @@ The report includes:
 * FRED API
 * Open-Meteo API
 
-## Future Enhancements
+---
 
-* USDA Food Price Analytics
-* Fruit Price Intelligence
-* Pulse Market Analytics
-* Dairy Market Analytics
-* Poultry Market Analytics
+# Future Roadmap
+
+* USDA Agricultural Data Integration
+* Livestock Market Expansion
+* Food Price Analytics
 * Machine Learning Forecasting
-* Streamlit Dashboard
-* Power BI Integration
-* Databricks Integration
-* AI-Generated Market Commentary
+* AI Generated Commentary
 * Portfolio Optimization Engine
-* Multi-Factor Asset Allocation Models
+* Streamlit Interactive Dashboard
+* Databricks Integration
+* Power BI Integration
+* Cloud Deployment Automation
 
-## Disclaimer
+---
 
-This platform is intended for research, educational, portfolio, and analytical purposes only.
+# Disclaimer
 
-It does not constitute investment advice, financial advice, tax advice, or trading recommendations.
+This platform is intended solely for research, educational, portfolio, and analytical purposes.
 
-Users should conduct independent research and due diligence before making investment decisions.
+It does not constitute investment advice, trading advice, tax advice, or financial recommendations.
+
+Users should perform independent due diligence before making investment decisions.
+
+---
+
+# Author
+
+Rajat Patyal
+
+MissionVision
+
+Cloud • AI • Data Engineering • Financial Analytics

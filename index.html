@@ -1,25 +1,488 @@
-<h1>Global Macro Intelligence Platform</h1>
+<!DOCTYPE html>
 
-<h2>Commodity Dashboard</h2>
-<img src="output/charts/commodity_dashboard.png">
+<html lang="en">
 
-<h2>Metals Dashboard</h2>
-<img src="output/charts/metals_dashboard.png">
+<head>
 
-<h2>Agriculture Dashboard</h2>
-<img src="output/charts/agriculture_dashboard.png">
+<meta charset="UTF-8">
 
-<h2>Equity Dashboard</h2>
-<img src="output/charts/equity_dashboard.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<h2>Forex Dashboard</h2>
-<img src="output/charts/forex_dashboard.png">
+<title>Global Macro Intelligence Platform</title>
 
-<h2>Opportunities Dashboard</h2>
-<img src="output/charts/opportunity_dashboard.png">
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f4f6f9;
+
+    color: #1f2937;
+
+    line-height: 1.6;
+
+}
+
+header {
+
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e3a8a
+    );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    box-shadow: 0 4px 12px rgba(
+        0,
+        0,
+        0,
+        0.25
+    );
+
+}
+
+header h1 {
+
+    font-size: 48px;
+
+    margin-bottom: 10px;
+
+}
+
+header .subtitle {
+
+    font-size: 20px;
+
+    color: #cbd5e1;
+
+    margin-bottom: 15px;
+
+}
+
+header .tagline {
+
+    color: #fbbf24;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+}
+
+.container {
+
+    width: 95%;
+
+    max-width: 1600px;
+
+    margin: auto;
+
+    padding: 40px 0;
+
+}
+
+.section {
+
+    margin-bottom: 50px;
+
+}
+
+.section h2 {
+
+    color: white;
+
+    padding: 15px 20px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    font-size: 28px;
+
+    box-shadow: 0 2px 8px rgba(
+        0,
+        0,
+        0,
+        0.15
+    );
+
+}
+
+/* Section Colors */
+
+.executive h2 {
+
+    background: #f59e0b;
+
+}
+
+.commodity h2 {
+
+    background: #16a34a;
+
+}
+
+.agriculture h2 {
+
+    background: #15803d;
+
+}
+
+.markets h2 {
+
+    background: #2563eb;
+
+}
+
+.grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(600px, 1fr)
+    );
+
+    gap: 25px;
+
+}
+
+.card {
+
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 12px rgba(
+        0,
+        0,
+        0,
+        0.08
+    );
+
+    transition: all 0.25s ease;
+
+}
+
+.card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(
+        0,
+        0,
+        0,
+        0.15
+    );
+
+}
+
+.card h3 {
+
+    background: #f8fafc;
+
+    color: #0f172a;
+
+    padding: 15px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    font-size: 20px;
+
+}
+
+.card img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+/* PDF Button */
+
+.download-section {
+
+    text-align: center;
+
+    margin: 60px 0;
+
+}
+
+.download-btn {
+
+    display: inline-block;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    );
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 18px 40px;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    box-shadow: 0 4px 12px rgba(
+        37,
+        99,
+        235,
+        0.3
+    );
+
+}
+
+.download-btn:hover {
+
+    background: linear-gradient(
+        135deg,
+        #1d4ed8,
+        #1e40af
+    );
+
+}
+
+/* Footer */
+
+footer {
+
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b
+    );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+
+    margin-top: 40px;
+
+}
+
+footer p {
+
+    margin: 5px 0;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+```
+<h1>
+    Global Macro Intelligence Platform
+</h1>
+
+<div class="subtitle">
+
+    Institutional Macro Research • Commodities • Metals • Agriculture • Equities • Forex
+
+</div>
+
+<div class="tagline">
+
+    Market Intelligence • Opportunity Rankings • Trade Ideas • Automated Reporting
+
+</div>
+```
+
+</header>
+
+<div class="container">
+
+```
+<!-- Executive Overview -->
+
+<section class="section executive">
+
+    <h2>
+        Executive Overview
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <h3>
+                Executive Dashboard
+            </h3>
+
+            <img src="output/charts/executive_dashboard.png">
+
+        </div>
+
+        <div class="card">
+
+            <h3>
+                Opportunity Rankings
+            </h3>
+
+            <img src="output/charts/opportunity_ranking.png">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Commodity Intelligence -->
+
+<section class="section commodity">
+
+    <h2>
+        Commodity Intelligence
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <h3>
+                Commodity Markets Dashboard
+            </h3>
+
+            <img src="output/charts/commodity_dashboard.png">
+
+        </div>
+
+        <div class="card">
+
+            <h3>
+                Precious Metals Dashboard
+            </h3>
+
+            <img src="output/charts/precious_metals_dashboard.png">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Agriculture -->
+
+<section class="section agriculture">
+
+    <h2>
+        Agriculture Markets
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <h3>
+                Agriculture Dashboard
+            </h3>
+
+            <img src="output/charts/agriculture_dashboard.png">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Financial Markets -->
+
+<section class="section markets">
+
+    <h2>
+        Financial Markets
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <h3>
+                Equity Markets Dashboard
+            </h3>
+
+            <img src="output/charts/executive_dashboard.png">
+
+        </div>
+
+        <div class="card">
+
+            <h3>
+                Foreign Exchange Dashboard
+            </h3>
+
+            <img src="output/charts/forex_dashboard.png">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PDF Download -->
+
+<div class="download-section">
+
+    <a
+        class="download-btn"
+        href="output/Global_Macro_Intelligence_Report.pdf"
+        target="_blank">
+
+        📄 Download Latest Macro Intelligence Report
+
+    </a>
+
+</div>
+```
+
+</div>
+
+<footer>
+
+```
+<p>
+    Global Macro Intelligence Platform
+</p>
 
 <p>
-<a href="output/Global_Macro_Intelligence_Report.pdf">
-Download Latest PDF Report
-</a>
+    Powered by FRED Economic Data • Python Analytics • ReportLab
 </p>
+
+<p>
+    MissionVision
+</p>
+```
+
+</footer>
+
+</body>
+
+</html>
