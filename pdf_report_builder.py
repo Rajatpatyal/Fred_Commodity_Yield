@@ -19,9 +19,68 @@ from datetime import datetime
 
 class PDFReportBuilder:
 
+    ASSET_UNITS = {
+
+    "WTI Crude": "USD per barrel",
+    "Natural Gas": "USD per million BTU (MMBtu)",
+
+    "Copper": "USD per metric ton",
+    "Aluminum": "USD per metric ton",
+    "Nickel": "USD per metric ton",
+    "Zinc": "USD per metric ton",
+    "Lead": "USD per metric ton",
+    "Tin": "USD per metric ton",
+
+    "Corn": "USD per metric ton",
+    "Wheat": "USD per metric ton",
+    "Soybeans": "USD per metric ton",
+    "Rice": "USD per metric ton",
+    "Barley": "USD per metric ton",
+
+    "Cotton": "US cents per pound",
+    "Sugar": "US cents per pound",
+    "Coffee": "US cents per pound",
+
+    "Beef": "US cents per pound",
+    "Pork": "US cents per pound",
+
+    "S&P 500": "Index points",
+    "NASDAQ": "Index points",
+    "Dow Jones": "Index points",
+    "VIX": "Volatility Index",
+
+    "2Y Treasury": "Percent yield (%)",
+    "10Y Treasury": "Percent yield (%)",
+    "30Y Treasury": "Percent yield (%)",
+
+    "USD/INR": "INR per USD",
+    "JPY/USD": "JPY per USD",
+    "EUR/USD": "USD per EUR",
+    "GBP/USD": "USD per GBP",
+    "CHF/USD": "CHF per USD",
+    "CAD/USD": "CAD per USD",
+    "KRW/USD": "KRW per USD",
+    "AUD/USD": "USD per AUD",
+
+    "US Dollar Index": "Index points",
+
+    "Fed Funds": "Percent (%)",
+    "Unemployment": "Percent (%)",
+
+    "Inflation": "CPI Index Level"
+}
+    
+    
+    
+    
+    
+    
     def __init__(self):
 
         self.styles = getSampleStyleSheet()
+
+
+
 
     # =====================================
     # TABLE HELPER
@@ -1372,6 +1431,107 @@ class PDFReportBuilder:
         elements.append(
             PageBreak()
         )
+
+
+        
+
+
+                # =====================================
+        # ASSET DEFINITIONS & UNITS
+        # =====================================
+
+        elements.append(PageBreak())
+
+        elements.append(
+            Paragraph(
+                "Asset Definitions & Units Reference",
+                styles["Heading1"]
+            )
+        )
+
+        elements.append(
+            Paragraph(
+                """
+                The following reference table describes the standard market units
+                used throughout this report. These units help interpret commodity,
+                financial market, currency, and macroeconomic indicators.
+                """,
+                styles["BodyText"]
+            )
+        )
+
+        unit_table_data = [
+
+            ["Asset", "Typical Unit"],
+
+            ["WTI Crude", "USD per barrel"],
+            ["Natural Gas", "USD per million BTU (MMBtu)"],
+
+            ["Copper", "USD per metric ton"],
+            ["Aluminum", "USD per metric ton"],
+            ["Nickel", "USD per metric ton"],
+            ["Zinc", "USD per metric ton"],
+            ["Lead", "USD per metric ton"],
+            ["Tin", "USD per metric ton"],
+
+            ["Corn", "USD per metric ton"],
+            ["Wheat", "USD per metric ton"],
+            ["Soybeans", "USD per metric ton"],
+            ["Rice", "USD per metric ton"],
+            ["Barley", "USD per metric ton"],
+
+            ["Cotton", "US cents per pound"],
+            ["Sugar", "US cents per pound"],
+            ["Coffee", "US cents per pound"],
+
+            ["Beef", "US cents per pound"],
+            ["Pork", "US cents per pound"],
+
+            ["S&P 500", "Index points"],
+            ["NASDAQ", "Index points"],
+            ["Dow Jones", "Index points"],
+            ["VIX", "Volatility Index points"],
+
+            ["2Y Treasury", "Percent yield (%)"],
+            ["10Y Treasury", "Percent yield (%)"],
+            ["30Y Treasury", "Percent yield (%)"],
+
+            ["USD/INR", "INR per USD"],
+            ["JPY/USD", "JPY per USD"],
+            ["EUR/USD", "USD per EUR"],
+            ["GBP/USD", "USD per GBP"],
+            ["CHF/USD", "CHF per USD"],
+            ["CAD/USD", "CAD per USD"],
+            ["KRW/USD", "KRW per USD"],
+            ["AUD/USD", "USD per AUD"],
+
+            ["US Dollar Index", "Index points"],
+
+            ["Fed Funds Rate", "Percent (%)"],
+            ["Unemployment", "Percent (%)"],
+            ["Inflation (CPI)", "CPI Index Level"]
+
+        ]
+
+        unit_table = Table(
+            unit_table_data,
+            colWidths=[180, 200]
+        )
+
+        unit_table.setStyle(
+            TableStyle([
+                ("BACKGROUND", (0, 0), (-1, 0), colors.darkblue),
+                ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
+                ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
+                ("GRID", (0, 0), (-1, -1), 0.5, colors.black),
+                ("ROWBACKGROUNDS", (0, 1), (-1, -1),
+                [colors.whitesmoke, colors.lightgrey]),
+                ("VALIGN", (0, 0), (-1, -1), "MIDDLE")
+            ])
+        )
+
+        elements.append(unit_table)
+        elements.append(Spacer(1, 12))
 
         # =====================================
         # DISCLAIMER
