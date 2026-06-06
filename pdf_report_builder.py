@@ -1433,14 +1433,116 @@ class PDFReportBuilder:
         )
 
 
-        
+        # =====================================
+        # PRECIOUS METALS REFERENCE
+        # =====================================
+
+        elements.append(
+
+            Paragraph(
+
+                "Precious Metals Reference",
+
+                styles["Heading1"]
+
+            )
+
+        )
+
+        precious_metals_table = Table(
+
+            [
+
+                ["Metal",  "Typical Unit"],
+
+                ["Gold",  "USD per troy ounce"],
+
+                ["Silver",  "USD per troy ounce"],
+
+                ["Platinum",  "USD per troy ounce"],
+
+                ["Palladium",  "USD per troy ounce"]
+
+            ],
+
+            colWidths=[180, 200]
+
+        )
+
+        precious_metals_table.setStyle(
+
+            TableStyle([
+
+                ("BACKGROUND", (0,0), (-1,0), colors.darkgoldenrod),
+
+                ("TEXTCOLOR", (0,0), (-1,0), colors.white),
+
+                ("FONTNAME", (0,0), (-1,0), "Helvetica-Bold"),
+
+                ("GRID", (0,0), (-1,-1), 0.5, colors.black),
+
+                ("ROWBACKGROUNDS",
+
+                (0,1),
+
+                (-1,-1),
+
+                [colors.whitesmoke, colors.lightgrey]),
+
+                ("ALIGN", (1,1), (1,-1), "RIGHT")
+
+            ])
+
+        )
+
+        elements.append(
+
+            precious_metals_table
+
+        )
+
+        elements.append(
+
+            Spacer(1, 12)
+
+        )
+
+        elements.append(
+
+            Paragraph(
+
+                """
+
+                Precious metals are quoted in USD per troy ounce.
+
+                Gold is commonly used as an inflation hedge and safe-haven asset.
+
+                Silver serves both investment and industrial demand.
+
+                Platinum and Palladium are heavily utilized in automotive,
+
+                manufacturing, and industrial applications.
+
+                """,
+
+                styles["BodyText"]
+
+            )
+
+        )
+
+        elements.append(
+
+            Spacer(1, 12)
+
+        )
 
 
                 # =====================================
         # ASSET DEFINITIONS & UNITS
         # =====================================
 
-        elements.append(PageBreak())
+        
 
         elements.append(
             Paragraph(
