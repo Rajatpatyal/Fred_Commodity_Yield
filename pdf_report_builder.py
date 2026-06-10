@@ -658,7 +658,10 @@ class PDFReportBuilder:
 
                 "Lead",
 
-                "Tin"
+                "Tin",
+
+                "Iron Ore"
+
 
             ])
 
@@ -1575,6 +1578,8 @@ class PDFReportBuilder:
             ["Zinc", "USD per metric ton"],
             ["Lead", "USD per metric ton"],
             ["Tin", "USD per metric ton"],
+            ["Iron Ore", "USD per metric ton"],
+            ["Stainless Steel Wire", "PPI Index (Dec 2010 = 100)"],
 
             ["Corn", "USD per metric ton"],
             ["Wheat", "USD per metric ton"],
@@ -1588,6 +1593,9 @@ class PDFReportBuilder:
 
             ["Beef", "US cents per pound"],
             ["Pork", "US cents per pound"],
+            ["Poultry", "USD per pound"],
+            ["Eggs", "USD per dozen"],
+            ["Milk", "USD per gallon"],
 
             ["S&P 500", "Index points"],
             ["NASDAQ", "Index points"],

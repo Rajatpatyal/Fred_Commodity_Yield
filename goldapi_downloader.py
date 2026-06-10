@@ -8,10 +8,7 @@ class GoldAPIDownloader:
     def __init__(self, api_key):
 
         self.api_key = api_key
-
-        self.base_url = (
-            "https://www.goldapi.io/api"
-        )
+        self.base_url = "https://www.goldapi.io/api"
 
     # =====================================
     # GET SINGLE METAL
@@ -22,67 +19,59 @@ class GoldAPIDownloader:
         url = f"{self.base_url}/{symbol}/USD"
 
         headers = {
+            "x-access-token": self.api_key,
+            "Content-Type": "application/json"
+        }
 
-            "x-access-token":
-            self.api_key,
-
-            "Content-Type":
-            "application/json"
-
+        fallback_prices = {
+            "XAU": 0.00,   # Gold
+            "XAG": 0.00,     # Silver
+            "XPT": 0.00,   # Platinum
+            "XPD": 0.00    # Palladium
         }
 
         try:
 
             response = requests.get(
-
                 url,
-
                 headers=headers,
-
                 timeout=30
-
             )
 
             if response.status_code != 200:
 
                 print(
-                    f"Error {symbol}:",
-                    response.status_code
+                    f"Error {symbol}: {response.status_code}"
                 )
 
-                return None
+                return {
+                    "Asset": symbol,
+                    "Price": fallback_prices.get(symbol, 0),
+                    "Currency": "USD",
+                    "Timestamp": datetime.now()
+                }
 
             data = response.json()
 
             return {
-
-                "Asset":
-                symbol,
-
-                "Price":
-                data.get(
-                    "price"
-                ),
-
-                "Currency":
-                data.get(
-                    "currency"
-                ),
-
-                "Timestamp":
-                datetime.now()
-
+                "Asset": symbol,
+                "Price": data.get("price"),
+                "Currency": data.get("currency", "USD"),
+                "Timestamp": datetime.now()
             }
 
         except Exception as e:
 
             print(
-                f"Error downloading {symbol}"
+                f"Error {symbol}: {e}"
             )
 
-            print(e)
-
-            return None
+            return {
+                "Asset": symbol,
+                "Price": fallback_prices.get(symbol, 0),
+                "Currency": "USD",
+                "Timestamp": datetime.now()
+            }
 
     # =====================================
     # GET ALL METALS
@@ -91,19 +80,10 @@ class GoldAPIDownloader:
     def get_precious_metals(self):
 
         metals = {
-
-            "XAU":
-            "Gold",
-
-            "XAG":
-            "Silver",
-
-            "XPT":
-            "Platinum",
-
-            "XPD":
-            "Palladium"
-
+            "XAU": "Gold",
+            "XAG": "Silver",
+            "XPT": "Platinum",
+            "XPD": "Palladium"
         }
 
         rows = []
@@ -118,47 +98,27 @@ class GoldAPIDownloader:
                 symbol
             )
 
-            if result is None:
-
-                continue
-
             rows.append({
-
-                "Asset":
-                name,
-
-                "Value":
-                result["Price"]
-
+                "Asset": name,
+                "Value": result["Price"]
             })
 
-        return pd.DataFrame(
-            rows
-        )
+        return pd.DataFrame(rows)
 
     # =====================================
     # SAVE CSV
     # =====================================
 
     def save_snapshot(
-
         self,
-
-        filename=
-        "precious_metals.csv"
-
+        filename="precious_metals.csv"
     ):
 
-        df = (
-            self.get_precious_metals()
-        )
+        df = self.get_precious_metals()
 
         df.to_csv(
-
             filename,
-
             index=False
-
         )
 
         print(
@@ -171,23 +131,14 @@ class GoldAPIDownloader:
 if __name__ == "__main__":
 
     API_KEY = (
-        "goldapi-808061c43c397ef4856a8e614b15acd4-io"
+        "goldapi-ed48412e9b021616246ae03b135596fe-io"
     )
 
-    gold = (
-        GoldAPIDownloader(
-            API_KEY
-        )
+    gold = GoldAPIDownloader(
+        API_KEY
     )
 
-    metals = (
-        gold.save_snapshot()
-    )
+    metals = gold.save_snapshot()
 
-    print(
-        "\nPrecious Metals"
-    )
-
-    print(
-        metals
-    )
+    print("\nPrecious Metals")
+    print(metals)

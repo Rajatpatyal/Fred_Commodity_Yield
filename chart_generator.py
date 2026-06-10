@@ -82,6 +82,8 @@ class ChartGenerator:
                 "Zinc",
                 "Lead",
                 "Tin"
+                "Iron Ore",
+                
 
             ])
 
@@ -238,6 +240,11 @@ class ChartGenerator:
 
                 "Beef",
                 "Pork"
+            
+                "Poultry",
+                
+
+                
 
             ])
 

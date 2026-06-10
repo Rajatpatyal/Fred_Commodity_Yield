@@ -151,6 +151,8 @@ class FredDownloader:
 
     "PLEADUSDM": "Lead",
     "PTINUSDM": "Tin",
+    "PIORECRUSDM": "Iron Ore",
+    "WPU10170502": "Stainless Steel Wire",
 
     # ===================================
     # AGRICULTURE
@@ -178,9 +180,9 @@ class FredDownloader:
 
     # Optional (test availability)
 
-    "PMILKUSDQ": "Milk",
-    "PPOULTRYUSDQ": "Poultry",
-    "PEGGSUSDQ": "Eggs",
+    "APU0000709112": "Milk",
+    "APU0000706111": "Poultry",
+    "APU0000708111": "Eggs",
 
     # ===================================
     # EQUITIES
