@@ -1,7 +1,7 @@
 Spread,Value,Signal
-Gold/Silver Ratio,63.62,Bullish Silver
-Platinum/Gold Ratio,0.41,Relative Value
-Palladium/Platinum Ratio,0.69,Relative Value
+Gold/Silver Ratio,65.33,Bullish Gold
+Platinum/Gold Ratio,0.4,Relative Value
+Palladium/Platinum Ratio,0.71,Relative Value
 Oil/Gas Ratio,31.26,Bullish Oil
 Wheat/Corn Ratio,1.02,Relative Value
 Soybean/Corn Ratio,1.88,Bullish Soybeans
@@ -11,6 +11,6 @@ Rice/Corn Ratio,1.86,Relative Value
 Beef/Pork Ratio,4.04,Bullish Beef
 Copper/Aluminum Ratio,3.69,Industrial Strength
 Nickel/Zinc Ratio,5.46,Industrial Strength
-10Y-2Y Spread,0.38,Positive Yield Curve
-30Y-10Y Spread,0.46,Yield Curve
+10Y-2Y Spread,0.41,Positive Yield Curve
+30Y-10Y Spread,0.47,Yield Curve
 EURUSD/GBPUSD,0.86,FX Relative Value
