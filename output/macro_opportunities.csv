@@ -2,6 +2,7 @@ Asset,Category,Score,Reason
 Copper,Industrial Metals,8.25,Positive Momentum
 Nickel,Industrial Metals,7.64,Positive Momentum
 Gold,Precious Metals,7.29,Positive Momentum
+Silver,Precious Metals,7.13,Strong Relative Strength
 Tin,Industrial Metals,7.05,Neutral
 Dow Jones,Equities,7.04,Neutral
 Soybeans,Agriculture,6.85,Positive Momentum
@@ -15,7 +16,6 @@ Beef,Livestock,5.79,Constructive Setup
 Lead,Industrial Metals,5.74,Neutral
 Platinum,Precious Metals,5.68,Neutral
 KRW/USD,Forex,5.64,Neutral
-Silver,Precious Metals,5.62,Positive Momentum
 Palladium,Precious Metals,5.54,Neutral
 Rice,Agriculture,5.1,Neutral
 Inflation,Macro,5.02,Neutral
