@@ -402,7 +402,7 @@ Automation components include:
 * Automatic Git Commit
 * Automatic Git Push
 * SSH Authentication
-* GitHub Pages Deployment
+* GitHub Pages Deployment ( https://rajatpatyal.github.io/Fred_Commodity_Yield/ )
 
 Example Cron Schedule
 
