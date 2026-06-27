@@ -1,6 +1,7 @@
 #!/bin/bash
 
-PROJECT="$HOME/Documents/Fred_Commodity_Yield"
+PROJECT="/home/rajat/Documents/Fred_Commodity_Yield"
+PYTHON="/home/rajat/.pyenv/versions/3.12.3/bin/python3"
 
 cd "$PROJECT" || exit 1
 
@@ -9,21 +10,24 @@ echo "Global Macro Intelligence Platform"
 echo "Started: $(date)"
 echo "========================================="
 
-# Activate virtual environment (if you have one)
-# source venv/bin/activate
+$PYTHON main.py
 
-# Run the platform
-python3 main.py
+if [ $? -eq 0 ]; then
+    git add .
 
-# Commit and push only if there are changes
-git add .
+    if ! git diff --cached --quiet; then
+        git commit -m "Automated Update $(date '+%Y-%m-%d %H:%M')"
 
-if ! git diff --cached --quiet; then
-    git commit -m "Automated Update $(date '+%Y-%m-%d %H:%M')"
-    git push origin main
-    echo "GitHub updated."
+        if git push origin main; then
+            echo "GitHub updated successfully."
+        else
+            echo "GitHub push failed."
+        fi
+    else
+        echo "No changes detected."
+    fi
 else
-    echo "No changes detected."
+    echo "main.py failed. Nothing committed."
 fi
 
 echo "Finished: $(date)"
