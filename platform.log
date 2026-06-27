@@ -1,0 +1,10 @@
+=========================================
+Global Macro Intelligence Platform
+Started: Sat Jun 27 06:08:01 AM IST 2026
+=========================================
+Traceback (most recent call last):
+  File "/home/rajat/Documents/Fred_Commodity_Yield/main.py", line 3, in <module>
+    from fred_downloader import FredDownloader
+  File "/home/rajat/Documents/Fred_Commodity_Yield/fred_downloader.py", line 3, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
