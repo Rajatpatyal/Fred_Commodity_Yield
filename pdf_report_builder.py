@@ -1740,7 +1740,19 @@ class PDFReportBuilder:
         ["Potash","~US$315","USD per Metric Ton"],
         ["Magnesium","~US$2,900","USD per Metric Ton"],
         ["Boron","~US$750","USD per Metric Ton"],
-        ["Arsenic","~US$8","USD per Kilogram"]
+        ["Arsenic","~US$8","USD per Kilogram"],
+
+        # Gemstones
+
+        # Gemstones
+
+        ["Diamond (Gem Quality)","~US$1,800","USD per Carat"],
+        ["Industrial Diamond","~US$0.80","USD per Carat"],
+        ["Emerald","~US$6,000","USD per Carat"],
+        ["Ruby","~US$12,000","USD per Carat"],
+        ["Sapphire","~US$2,500","USD per Carat"]
+
+
 
         ]
 
