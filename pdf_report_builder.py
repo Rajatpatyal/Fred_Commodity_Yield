@@ -1798,8 +1798,7 @@ class PDFReportBuilder:
         ["Clinker","~US$72","USD per Metric Ton"],
         ["Rebar Steel","~US$720","USD per Metric Ton"],
         ["Structural Steel","~US$840","USD per Metric Ton"],
-        ["Limestone","~US$18","USD per Metric Ton"],
-        ["Gypsum","~US$21","USD per Metric Ton"],
+        
         ["Gravel","~US$16","USD per Metric Ton"],
         ["Sand","~US$22","USD per Metric Ton"],
 
