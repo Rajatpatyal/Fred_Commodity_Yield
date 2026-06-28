@@ -1798,6 +1798,11 @@ class PDFReportBuilder:
         ["Clinker","~US$72","USD per Metric Ton"],
         ["Rebar Steel","~US$720","USD per Metric Ton"],
         ["Structural Steel","~US$840","USD per Metric Ton"],
+        ["Limestone","~US$18","USD per Metric Ton"],
+        ["Gypsum","~US$21","USD per Metric Ton"],
+        ["Gravel","~US$16","USD per Metric Ton"],
+        ["Sand","~US$22","USD per Metric Ton"],
+
 
         # Forest Products
 
@@ -1814,6 +1819,60 @@ class PDFReportBuilder:
         ["Benzene","~US$910","USD per Metric Ton"],
         ["Toluene","~US$860","USD per Metric Ton"],
         ["Xylene","~US$895","USD per Metric Ton"],
+
+
+        # Rubber & Plantation Commodities
+
+        ["Natural Rubber (RSS3)","~US$2.15","USD per Kilogram"],
+        ["Natural Rubber (TSR20)","~US$1,950","USD per Metric Ton"],
+        ["Latex (Natural)","~US$1.75","USD per Kilogram"],
+        ["Synthetic Rubber","~US$1,850","USD per Metric Ton"],
+        ["Palm Oil (CPO)","~US$980","USD per Metric Ton"],
+        ["Palm Kernel Oil","~US$1,120","USD per Metric Ton"],
+        ["Coconut Oil","~US$1,250","USD per Metric Ton"],
+        ["Olive Oil","~US$4,900","USD per Metric Ton"],
+        ["Sunflower Oil","~US$1,080","USD per Metric Ton"],
+        ["Soybean Oil","~US$1,020","USD per Metric Ton"],
+        ["Canola Oil","~US$760","USD per Metric Ton"],
+
+        # Fibres & Textiles
+
+        ["Cotton","~67","US Cents per Pound"],
+        ["Wool","~US$9.50","USD per Kilogram"],
+        ["Silk","~US$52","USD per Kilogram"],
+        ["Jute","~US$650","USD per Metric Ton"],
+        ["Hemp Fiber","~US$1,300","USD per Metric Ton"],
+        ["Flax Fiber","~US$1,050","USD per Metric Ton"],
+
+        # Paper & Forestry
+
+        ["Wood Pulp","~US$720","USD per Metric Ton"],
+        ["Hardwood Pulp","~US$760","USD per Metric Ton"],
+        ["Softwood Pulp","~US$810","USD per Metric Ton"],
+        ["Timber","~US$180","USD per Cubic Meter"],
+        ["Logs","~US$145","USD per Cubic Meter"],
+        ["Lumber","~US$560","USD per 1,000 Board Feet"],
+        ["Plywood","~US$780","USD per 1,000 sq ft"],
+
+        # Industrial Chemicals
+
+        ["Sulfur","~US$145","USD per Metric Ton"],
+        ["Sulfuric Acid","~US$130","USD per Metric Ton"],
+        ["Caustic Soda","~US$480","USD per Metric Ton"],
+        ["Soda Ash","~US$270","USD per Metric Ton"],
+        ["Chlorine","~US$320","USD per Metric Ton"],
+        ["Hydrogen","~US$5.50","USD per Kilogram"],
+        ["Industrial Oxygen","~US$55","USD per Metric Ton"],
+        ["Industrial Nitrogen","~US$38","USD per Metric Ton"],
+
+        # Glass & Ceramics
+
+        ["Silica Sand","~US$68","USD per Metric Ton"],
+        ["Quartz","~US$145","USD per Metric Ton"],
+        ["Feldspar","~US$95","USD per Metric Ton"],
+        ["Kaolin","~US$165","USD per Metric Ton"],
+        ["Bentonite","~US$115","USD per Metric Ton"],
+
 
         # Carbon Markets
 
