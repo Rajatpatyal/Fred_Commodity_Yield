@@ -1712,6 +1712,36 @@ class PDFReportBuilder:
         ["Lutetium Oxide","~US$770","USD per Kilogram"],
         ["Terbium Oxide","~US$930","USD per Kilogram"]
 
+        # Nuclear, Battery & Strategic Minerals
+
+        ["Uranium (U₃O₈)","US$85.25","USD per Pound"],
+        ["Lithium Carbonate","~US$8,600","USD per Metric Ton"],
+        ["Lithium Hydroxide","~US$8,900","USD per Metric Ton"],
+        ["Cobalt","~US$33,000","USD per Metric Ton"],
+        ["Graphite (Natural Flake)","~US$1,000","USD per Metric Ton"],
+        ["Graphite (Lump & Chip)","~US$2,600","USD per Metric Ton"],
+        ["Graphite (Amorphous)","~US$470","USD per Metric Ton"],
+        ["Niobium (Ferroniobium)","~US$45","USD per Kilogram"],
+        ["Tantalum","~US$190","USD per Kilogram"],
+        ["Scandium Oxide","~US$1,300","USD per Kilogram"],
+        ["Titanium Sponge","~US$12","USD per Kilogram"],
+        ["Zirconium Sponge","~US$35","USD per Kilogram"],
+        ["Hafnium","~US$1,700","USD per Kilogram"],
+        ["Beryllium","~US$3,500","USD per Kilogram"],
+        ["Cadmium","~US$3.20","USD per Kilogram"],
+        ["Selenium","~US$25","USD per Kilogram"],
+        ["Rubidium","~US$12,000","USD per Kilogram"],
+        ["Cesium","~US$65,000","USD per Kilogram"],
+        ["Chromium","~US$9,500","USD per Metric Ton"],
+        ["Fluorspar (Acid Grade)","~US$410","USD per Metric Ton"],
+        ["Fluorspar (Metallurgical Grade)","~US$360","USD per Metric Ton"],
+        ["Barite","~US$170","USD per Metric Ton"],
+        ["Phosphate Rock","~US$155","USD per Metric Ton"],
+        ["Potash","~US$315","USD per Metric Ton"],
+        ["Magnesium","~US$2,900","USD per Metric Ton"],
+        ["Boron","~US$750","USD per Metric Ton"],
+        ["Arsenic","~US$8","USD per Kilogram"]
+
         ]
 
         metal_table = Table(
