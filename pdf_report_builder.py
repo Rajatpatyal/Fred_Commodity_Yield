@@ -1872,6 +1872,40 @@ class PDFReportBuilder:
         ["Kaolin","~US$165","USD per Metric Ton"],
         ["Bentonite","~US$115","USD per Metric Ton"],
 
+        # Nuclear Materials
+
+        ["Uranium (U₃O₈)","US$85.25","USD per Pound"],
+        ["Uranium Hexafluoride (UF₆)","~US$165","USD per Kilogram U"],
+        ["Enriched Uranium (LEU)","Commercial Contracts","SWU + Uranium Feed"],
+        ["Thorium Oxide","~US$180","USD per Kilogram"],
+        ["Thorium Metal","~US$250","USD per Kilogram"],
+
+        ["Plutonium-239","Not Publicly Traded","Government Controlled"],
+        ["Weapons-Grade Plutonium","Restricted","Government Controlled"],
+        ["Mixed Oxide (MOX) Fuel","Contract Pricing","USD per Fuel Assembly"],
+
+        ["Deuterium (Heavy Water)","~US$750","USD per Kilogram"],
+        ["Heavy Water (D₂O)","~US$750","USD per Kilogram"],
+        ["Tritium","Restricted","Government Controlled"],
+
+        ["Helium-3","Contract Pricing","USD per Liter"],
+        ["Radium","Restricted","Government Controlled"],
+        ["Polonium-210","Restricted","Government Controlled"],
+
+        ["Americium-241","Commercial Contracts","USD per Gram"],
+        ["Neptunium","Restricted","Government Controlled"],
+        ["Curium","Restricted","Government Controlled"],
+        ["Californium-252","Commercial Contracts","USD per Microgram"],
+
+
+        ["Mercury","~US$95","USD per Flask (34.5 kg)"],
+        ["Bromine","~US$3,200","USD per Metric Ton"],
+        ["Helium","~US$18","USD per Thousand Cubic Feet"],
+        ["Neon","~US$90","USD per Cubic Meter"],
+        ["Argon","~US$1.50","USD per Cubic Meter"],
+        ["Krypton","~US$35","USD per Cubic Meter"],
+        ["Xenon","~US$1,800","USD per Cubic Meter"],
+
 
         # Carbon Markets
 
