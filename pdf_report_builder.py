@@ -1937,6 +1937,186 @@ class PDFReportBuilder:
         elements.append(metal_table)
         elements.append(Spacer(1,12))
 
+
+
+        
+        elements.append(
+            Paragraph(
+                """
+                <b>Global Agricultural, Food and Plantation Commodities</b><br/><br/>
+
+                Agricultural commodities form the backbone of global food security,
+                international trade, and inflation monitoring. The Global Macro
+                Intelligence Platform tracks major cereals, pulses, oilseeds,
+                plantation crops, spices, fruits, vegetables, livestock, seafood,
+                dairy products, forestry products, and dry fruits to provide a
+                comprehensive view of worldwide agricultural markets. These
+                commodities are influenced by seasonal production cycles, weather
+                patterns, geopolitical developments, export restrictions, consumer
+                demand, supply chain disruptions, and global trade flows. Monitoring
+                these assets enables better assessment of food inflation, commodity
+                price volatility, supply shortages, and long-term macroeconomic
+                trends affecting governments, businesses, and investors.
+                """,
+                styles["BodyText"]
+            )
+        )
+
+        agri_table_data = [
+
+        ["Asset","Representative Price","Typical Unit"],
+
+        # Pulses
+
+        ["Chickpeas (Gram)","~US$720","USD per Metric Ton"],
+        ["Lentils","~US$690","USD per Metric Ton"],
+        ["Green Gram (Moong)","~US$980","USD per Metric Ton"],
+        ["Black Gram (Urad)","~US$940","USD per Metric Ton"],
+        ["Pigeon Pea (Tur)","~US$920","USD per Metric Ton"],
+        ["Dry Peas","~US$410","USD per Metric Ton"],
+        ["Kidney Beans","~US$980","USD per Metric Ton"],
+        ["Faba Beans","~US$470","USD per Metric Ton"],
+        ["Cowpeas","~US$730","USD per Metric Ton"],
+        ["Soybeans","~US$390","USD per Metric Ton"],
+
+        # Cereals
+
+        ["Corn","~US$170","USD per Metric Ton"],
+        ["Wheat","~US$225","USD per Metric Ton"],
+        ["Rice","~US$420","USD per Metric Ton"],
+        ["Barley","~US$210","USD per Metric Ton"],
+        ["Oats","~US$235","USD per Metric Ton"],
+        ["Millet","~US$360","USD per Metric Ton"],
+        ["Sorghum","~US$225","USD per Metric Ton"],
+        ["Rye","~US$240","USD per Metric Ton"],
+
+        # Oilseeds
+
+        ["Canola","~US$560","USD per Metric Ton"],
+        ["Rapeseed","~US$565","USD per Metric Ton"],
+        ["Sunflower Seed","~US$510","USD per Metric Ton"],
+        ["Groundnut","~US$820","USD per Metric Ton"],
+        ["Sesame","~US$1,850","USD per Metric Ton"],
+        ["Mustard Seed","~US$720","USD per Metric Ton"],
+        ["Linseed","~US$760","USD per Metric Ton"],
+        ["Castor Seed","~US$820","USD per Metric Ton"],
+
+        # Plantation Crops
+
+        ["Coffee (Arabica)","~305","US Cents per Pound"],
+        ["Coffee (Robusta)","~195","US Cents per Pound"],
+        ["Tea","~US$3.40","USD per Kilogram"],
+        ["Cocoa","~US$8,200","USD per Metric Ton"],
+        ["Sugar","~16.8","US Cents per Pound"],
+        ["Natural Rubber","~US$2.15","USD per Kilogram"],
+        ["Latex","~US$1.75","USD per Kilogram"],
+
+        # Spices
+
+        ["Black Pepper","~US$7,200","USD per Metric Ton"],
+        ["Cardamom","~US$18,000","USD per Metric Ton"],
+        ["Turmeric","~US$2,350","USD per Metric Ton"],
+        ["Cumin","~US$4,500","USD per Metric Ton"],
+        ["Coriander","~US$1,350","USD per Metric Ton"],
+        ["Cloves","~US$8,400","USD per Metric Ton"],
+        ["Cinnamon","~US$5,900","USD per Metric Ton"],
+        ["Nutmeg","~US$8,600","USD per Metric Ton"],
+        ["Ginger","~US$1,900","USD per Metric Ton"],
+        ["Garlic","~US$1,500","USD per Metric Ton"],
+
+        # Fruits
+
+        ["Bananas","~US$820","USD per Metric Ton"],
+        ["Apples","~US$1,250","USD per Metric Ton"],
+        ["Oranges","~US$1,050","USD per Metric Ton"],
+        ["Grapes","~US$1,650","USD per Metric Ton"],
+        ["Mangoes","~US$1,150","USD per Metric Ton"],
+
+        # Vegetables
+
+        ["Potatoes","~US$280","USD per Metric Ton"],
+        ["Onions","~US$340","USD per Metric Ton"],
+        ["Tomatoes","~US$430","USD per Metric Ton"],
+
+        # Dairy
+
+        ["Milk","~US$18.5","USD per cwt"],
+        ["Butter","~US$7,100","USD per Metric Ton"],
+        ["Cheese","~US$4,900","USD per Metric Ton"],
+        ["Skim Milk Powder","~US$2,700","USD per Metric Ton"],
+        ["Whole Milk Powder","~US$3,800","USD per Metric Ton"],
+
+        # Livestock
+
+        ["Live Cattle","~US$210","US Cents per Pound"],
+        ["Feeder Cattle","~US$295","US Cents per Pound"],
+        ["Lean Hogs","~US$95","US Cents per Pound"],
+        ["Broiler Chicken","~US$1.95","USD per Pound"],
+
+        # Seafood
+
+        ["Atlantic Salmon","~US$8.50","USD per Kilogram"],
+        ["Shrimp","~US$7,800","USD per Metric Ton"],
+        ["Tuna","~US$1,950","USD per Metric Ton"],
+
+        # Forestry
+
+        ["Timber","~US$180","USD per Cubic Meter"],
+        ["Logs","~US$145","USD per Cubic Meter"],
+        ["Wood Pulp","~US$720","USD per Metric Ton"],
+        ["Lumber","~US$560","USD per 1,000 Board Feet"],
+
+        # Dry Fruits & Nuts
+
+        ["Cashew Kernels","~US$8,200","USD per Metric Ton"],
+        ["Raw Cashew Nuts","~US$1,450","USD per Metric Ton"],
+        ["Almonds","~US$6,100","USD per Metric Ton"],
+        ["Walnuts","~US$4,700","USD per Metric Ton"],
+        ["Pistachios","~US$8,900","USD per Metric Ton"],
+        ["Hazelnuts","~US$6,400","USD per Metric Ton"],
+        ["Macadamia Nuts","~US$9,800","USD per Metric Ton"],
+        ["Pecans","~US$7,300","USD per Metric Ton"],
+        ["Brazil Nuts","~US$5,900","USD per Metric Ton"],
+        ["Pine Nuts","~US$22,000","USD per Metric Ton"],
+
+        ["Raisins","~US$2,600","USD per Metric Ton"],
+        ["Dates","~US$1,850","USD per Metric Ton"],
+        ["Dried Figs","~US$4,300","USD per Metric Ton"],
+        ["Prunes","~US$3,600","USD per Metric Ton"],
+        ["Apricots (Dried)","~US$5,000","USD per Metric Ton"],
+        ["Cranberries (Dried)","~US$4,800","USD per Metric Ton"],
+        ["Blueberries (Dried)","~US$9,200","USD per Metric Ton"],
+        ["Goji Berries","~US$7,500","USD per Metric Ton"],
+        ["Coconut (Desiccated)","~US$2,300","USD per Metric Ton"],
+        ["Peanuts","~US$1,650","USD per Metric Ton"],
+        ["Chestnuts","~US$4,100","USD per Metric Ton"],
+        ["Areca Nut (Betel Nut)","~US$2,950","USD per Metric Ton"]
+
+        ]
+
+        agri_table = Table(
+            agri_table_data,
+            colWidths=[200,120,160]
+        )
+
+        agri_table.setStyle(
+            TableStyle([
+                ("BACKGROUND",(0,0),(-1,0),colors.darkgreen),
+                ("TEXTCOLOR",(0,0),(-1,0),colors.white),
+                ("FONTNAME",(0,0),(-1,0),"Helvetica-Bold"),
+                ("GRID",(0,0),(-1,-1),0.5,colors.black),
+                ("ROWBACKGROUNDS",(0,1),(-1,-1),
+                    [colors.whitesmoke, colors.beige]),
+                ("VALIGN",(0,0),(-1,-1),"MIDDLE"),
+                ("FONTSIZE",(0,0),(-1,-1),8)
+            ])
+        )
+
+        elements.append(agri_table)
+        elements.append(Spacer(1,12))
+        
+
+
         # =====================================
         # DISCLAIMER
         # =====================================
