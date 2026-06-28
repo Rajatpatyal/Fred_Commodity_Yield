@@ -1750,7 +1750,75 @@ class PDFReportBuilder:
         ["Industrial Diamond","~US$0.80","USD per Carat"],
         ["Emerald","~US$6,000","USD per Carat"],
         ["Ruby","~US$12,000","USD per Carat"],
-        ["Sapphire","~US$2,500","USD per Carat"]
+        ["Sapphire","~US$2,500","USD per Carat"],
+
+        # Energy Commodities
+
+        ["WTI Crude Oil","~US$66","USD per Barrel"],
+        ["Brent Crude Oil","~US$68","USD per Barrel"],
+        ["Natural Gas (Henry Hub)","~US$3.70","USD per MMBtu"],
+        ["Coal (Newcastle)","~US$108","USD per Metric Ton"],
+        ["Coking Coal","~US$185","USD per Metric Ton"],
+        ["Thermal Coal","~US$108","USD per Metric Ton"],
+        ["Lignite","~US$35","USD per Metric Ton"],
+        ["Anthracite","~US$170","USD per Metric Ton"],
+
+        ["Kerosene","~US$2.35","USD per Gallon"],
+        ["Jet Fuel","~US$2.30","USD per Gallon"],
+        ["Diesel (ULSD)","~US$2.45","USD per Gallon"],
+        ["Gasoline (RBOB)","~US$2.15","USD per Gallon"],
+        ["Fuel Oil","~US$2.10","USD per Gallon"],
+        ["Bitumen","~US$72","USD per Barrel"],
+        ["Propane","~US$0.85","USD per Gallon"],
+        ["Butane","~US$0.90","USD per Gallon"],
+        ["Liquefied Natural Gas (LNG)","~US$12","USD per MMBtu"],
+
+        # Fertilizers
+
+        ["Urea","~US$420","USD per Metric Ton"],
+        ["Ammonia","~US$520","USD per Metric Ton"],
+        ["DAP Fertilizer","~US$610","USD per Metric Ton"],
+        ["MAP Fertilizer","~US$575","USD per Metric Ton"],
+        ["Potash","~US$315","USD per Metric Ton"],
+        ["Phosphate Rock","~US$155","USD per Metric Ton"],
+
+        # Industrial Minerals
+
+        ["Limestone","~US$18","USD per Metric Ton"],
+        ["Gypsum","~US$21","USD per Metric Ton"],
+        ["Silica Sand","~US$68","USD per Metric Ton"],
+        ["Kaolin","~US$165","USD per Metric Ton"],
+        ["Bentonite","~US$115","USD per Metric Ton"],
+        ["Salt","~US$62","USD per Metric Ton"],
+        ["Sulfur","~US$145","USD per Metric Ton"],
+
+        # Construction Materials
+
+        ["Cement","~US$125","USD per Metric Ton"],
+        ["Clinker","~US$72","USD per Metric Ton"],
+        ["Rebar Steel","~US$720","USD per Metric Ton"],
+        ["Structural Steel","~US$840","USD per Metric Ton"],
+
+        # Forest Products
+
+        ["Lumber","~US$560","USD per 1,000 Board Feet"],
+        ["Plywood","~US$780","USD per 1,000 sq ft"],
+        ["Wood Pulp","~US$720","USD per Metric Ton"],
+        ["Newsprint","~US$690","USD per Metric Ton"],
+
+        # Petrochemicals
+
+        ["Ethylene","~US$980","USD per Metric Ton"],
+        ["Propylene","~US$920","USD per Metric Ton"],
+        ["Methanol","~US$350","USD per Metric Ton"],
+        ["Benzene","~US$910","USD per Metric Ton"],
+        ["Toluene","~US$860","USD per Metric Ton"],
+        ["Xylene","~US$895","USD per Metric Ton"],
+
+        # Carbon Markets
+
+        ["Carbon Credits (EU ETS)","~€72","EUR per Metric Ton CO₂"],
+        ["Carbon Credits (California)","~US$39","USD per Metric Ton CO₂"]
 
 
 
