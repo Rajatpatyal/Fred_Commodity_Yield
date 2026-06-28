@@ -1710,7 +1710,7 @@ class PDFReportBuilder:
         ["Praseodymium Oxide","~US$60","USD per Kilogram"],
         ["Dysprosium Oxide","~US$240","USD per Kilogram"],
         ["Lutetium Oxide","~US$770","USD per Kilogram"],
-        ["Terbium Oxide","~US$930","USD per Kilogram"]
+        ["Terbium Oxide","~US$930","USD per Kilogram"],
 
         # Nuclear, Battery & Strategic Minerals
 
