@@ -169,7 +169,7 @@ class FredDownloader:
     # Optional (test availability)
 
     "PBARLUSDQ": "Barley",
-    "POATSUSDQ": "Oats",
+    "M04074US16980M261NNBR": "Oats",
 
     # ===================================
     # LIVESTOCK
