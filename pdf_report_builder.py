@@ -1643,6 +1643,98 @@ class PDFReportBuilder:
         elements.append(unit_table)
         elements.append(Spacer(1, 12))
 
+
+        elements.append(
+            Paragraph(
+                """
+                The following table summarizes representative benchmark prices
+                and standard trading units for critical metals and minerals
+                monitored by the Global Macro Intelligence Platform.
+                """,
+                styles["BodyText"]
+            )
+        )
+
+        metal_table_data = [
+
+        ["Asset","Representative Price","Typical Unit"],
+
+        # Precious Metals
+
+        ["Gold","US$4,076.82","USD per Troy Ounce"],
+        ["Silver","US$59.18","USD per Troy Ounce"],
+        ["Platinum","US$1,615.00","USD per Troy Ounce"],
+        ["Palladium","US$1,188.00","USD per Troy Ounce"],
+
+        # Base Metals
+
+        ["Copper","~US$9,900","USD per Metric Ton"],
+        ["Aluminum","~US$2,550","USD per Metric Ton"],
+        ["Nickel","~US$15,400","USD per Metric Ton"],
+        ["Zinc","~US$2,700","USD per Metric Ton"],
+        ["Lead","~US$2,050","USD per Metric Ton"],
+        ["Tin","~US$33,000","USD per Metric Ton"],
+
+        # Industrial Metals
+
+        ["Iron Ore (62% Fe)","~US$94","USD per Dry Metric Ton"],
+        ["Steel (HRC)","~US$780","USD per Metric Ton"],
+        ["Silicon Metal","~US$2,100","USD per Metric Ton"],
+        ["Manganese","~US$4.75","USD per DMTU"],
+        ["Molybdenum","~US$21","USD per Pound"],
+        ["Tungsten (APT)","~US$365","USD per MTU"],
+        ["Vanadium Pentoxide","~US$5.80","USD per Pound"],
+
+        # Critical & Strategic Minerals
+
+        ["Antimony","~US$60,000","USD per Metric Ton"],
+        ["Bismuth","~US$18,000","USD per Metric Ton"],
+        ["Gallium","~US$575","USD per Kilogram"],
+        ["Germanium","~US$2,450","USD per Kilogram"],
+        ["Indium","~US$325","USD per Kilogram"],
+        ["Rhenium","~US$1,650","USD per Kilogram"],
+        ["Tellurium","~US$115","USD per Kilogram"],
+
+        # Rare Earth Oxides
+
+        ["Cerium Oxide","~US$2","USD per Kilogram"],
+        ["Lanthanum Oxide","~US$4","USD per Kilogram"],
+        ["Yttrium Oxide","~US$5","USD per Kilogram"],
+        ["Samarium Oxide","~US$2.50","USD per Kilogram"],
+        ["Ytterbium Oxide","~US$28","USD per Kilogram"],
+        ["Gadolinium Oxide","~US$29","USD per Kilogram"],
+        ["Europium Oxide","~US$30","USD per Kilogram"],
+        ["Erbium Oxide","~US$32","USD per Kilogram"],
+        ["Holmium Oxide","~US$50","USD per Kilogram"],
+        ["Neodymium Oxide","~US$58","USD per Kilogram"],
+        ["Praseodymium Oxide","~US$60","USD per Kilogram"],
+        ["Dysprosium Oxide","~US$240","USD per Kilogram"],
+        ["Lutetium Oxide","~US$770","USD per Kilogram"],
+        ["Terbium Oxide","~US$930","USD per Kilogram"]
+
+        ]
+
+        metal_table = Table(
+            metal_table_data,
+            colWidths=[180,120,170]
+        )
+
+        metal_table.setStyle(
+            TableStyle([
+                ("BACKGROUND",(0,0),(-1,0),colors.darkblue),
+                ("TEXTCOLOR",(0,0),(-1,0),colors.white),
+                ("FONTNAME",(0,0),(-1,0),"Helvetica-Bold"),
+                ("GRID",(0,0),(-1,-1),0.5,colors.black),
+                ("ROWBACKGROUNDS",(0,1),(-1,-1),
+                    [colors.whitesmoke, colors.lightgrey]),
+                ("VALIGN",(0,0),(-1,-1),"MIDDLE"),
+                ("FONTSIZE",(0,0),(-1,-1),8)
+            ])
+        )
+
+        elements.append(metal_table)
+        elements.append(Spacer(1,12))
+
         # =====================================
         # DISCLAIMER
         # =====================================
