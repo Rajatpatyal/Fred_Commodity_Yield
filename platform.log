@@ -92816,3 +92816,159 @@ TOP 20 OPPORTUNITIES
 19               USD/JPY              Macro   4.88
 
 Done.
+[main cab9e9c] Automated Update 2026-07-07 13:14
+ 2 files changed, 159 insertions(+), 3 deletions(-)
+To github.com:Rajatpatyal/Fred_Commodity_Yield.git
+   4fcefec..cab9e9c  main -> main
+GitHub updated successfully.
+Finished: Tue Jul  7 01:14:20 PM IST 2026
+=========================================
+Global Macro Intelligence Platform
+Started: Tue Jul  7 01:16:01 PM IST 2026
+=========================================
+======================================================================
+GLOBAL MACRO INTELLIGENCE PLATFORM
+======================================================================
+
+Downloading FRED Data...
+[1/43] Downloading WTI Crude
+[2/43] Downloading Natural Gas
+[3/43] Downloading Copper
+[4/43] Downloading Aluminum
+[5/43] Downloading Nickel
+[6/43] Downloading Zinc
+[7/43] Downloading Lead
+[8/43] Downloading Tin
+[9/43] Downloading Iron Ore
+[10/43] Downloading Stainless Steel Wire
+[11/43] Downloading Corn
+[12/43] Downloading Wheat
+[13/43] Downloading Soybeans
+[14/43] Downloading Cotton
+[15/43] Downloading Sugar
+[16/43] Downloading Coffee
+[17/43] Downloading Rice
+[18/43] Downloading Barley
+[19/43] Downloading Oats
+[20/43] Downloading Beef
+[21/43] Downloading Pork
+[22/43] Downloading Milk
+[23/43] Downloading Poultry
+[24/43] Downloading Eggs
+[25/43] Downloading S&P 500
+[26/43] Downloading NASDAQ
+[27/43] Downloading Dow Jones
+[28/43] Downloading VIX
+[29/43] Downloading 2Y Treasury
+[30/43] Downloading 10Y Treasury
+[31/43] Downloading 30Y Treasury
+[32/43] Downloading USD/INR
+[33/43] Downloading JPY/USD
+[34/43] Downloading EUR/USD
+[35/43] Downloading GBP/USD
+[36/43] Downloading CHF/USD
+[37/43] Downloading CAD/USD
+[38/43] Downloading KRW/USD
+[39/43] Downloading AUD/USD
+[40/43] Downloading US Dollar Index
+[41/43] Downloading Fed Funds
+[42/43] Downloading Unemployment
+[43/43] Downloading Inflation
+Saved output/macro_snapshot.csv
+
+Downloading Precious Metals...
+Downloading Gold
+Error XAU: 403
+Downloading Silver
+Error XAG: 403
+Downloading Platinum
+Error XPT: 403
+Downloading Palladium
+Error XPD: 403
+Saved output/precious_metals.csv
+
+Downloading Forex Markets...
+[1/6] USD/INR
+[2/6] USD/JPY
+[3/6] EUR/USD
+[4/6] GBP/USD
+[5/6] USD/CNY
+[6/6] USD/CHF
+Saved output/forex_snapshot.csv
+
+Downloading Weather Data...
+Saved output/weather_snapshot.csv
+
+Calculating Spreads...
+Risk Score: 5.26
+Macro Score: 4.74
+
+Running Opportunity Engine...
+
+Generating Charts...
+Created: output/charts/precious_metals_dashboard.png
+Created: output/charts/industrial_metals_dashboard.png
+Created: output/charts/energy_dashboard.png
+Created: output/charts/agriculture_dashboard.png
+Created: output/charts/livestock_dashboard.png
+Created: output/charts/forex_dashboard.png
+Created: output/charts/yield_curve.png
+Created: output/charts/spread_dashboard.png
+Created: output/charts/opportunity_ranking.png
+Created: output/charts/macro_dashboard.png
+Created: output/charts/executive_dashboard.png
+
+Building PDF...
+PDF saved successfully: output/Global_Macro_Intelligence_Report.pdf
+
+
+======================================================================
+PROCESS COMPLETE
+======================================================================
+
+Generated Files
+output/macro_snapshot.csv
+output/precious_metals.csv
+output/forex_snapshot.csv
+output/weather_snapshot.csv
+output/macro_spreads.csv
+output/macro_opportunities.csv
+output/trade_ideas.csv
+output/charts/precious_metals_dashboard.png
+output/charts/industrial_metals_dashboard.png
+output/charts/energy_dashboard.png
+output/charts/agriculture_dashboard.png
+output/charts/livestock_dashboard.png
+output/charts/forex_dashboard.png
+output/charts/yield_curve.png
+output/charts/spread_dashboard.png
+output/charts/opportunity_ranking.png
+output/charts/macro_dashboard.png
+output/charts/executive_dashboard.png
+output/Global_Macro_Intelligence_Report.pdf
+
+TOP 20 OPPORTUNITIES
+
+                   Asset           Category  Score
+0                 Copper  Industrial Metals   8.40
+1                 Nickel  Industrial Metals   7.78
+2                    Tin  Industrial Metals   7.20
+3              Dow Jones           Equities   7.20
+4               Soybeans        Agriculture   7.00
+5                 NASDAQ           Equities   6.91
+6                S&P 500           Equities   6.42
+7                 Coffee        Agriculture   6.15
+8               Aluminum  Industrial Metals   6.12
+9                   Zinc  Industrial Metals   6.10
+10                  Beef          Livestock   5.93
+11                  Lead  Industrial Metals   5.88
+12               KRW/USD              Forex   5.78
+13             WTI Crude             Energy   5.31
+14                  Rice        Agriculture   5.24
+15             Inflation              Macro   5.17
+16                  Corn        Agriculture   5.00
+17                 Wheat        Agriculture   5.00
+18  Stainless Steel Wire              Macro   4.91
+19               USD/JPY              Macro   4.88
+
+Done.
