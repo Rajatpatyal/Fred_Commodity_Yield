@@ -6,6 +6,7 @@ Dow Jones,Equities,7.18,Neutral
 Soybeans,Agriculture,6.99,Positive Momentum
 NASDAQ,Equities,6.9,Neutral
 S&P 500,Equities,6.4,Neutral
+Coffee,Agriculture,6.14,Positive Momentum
 Aluminum,Industrial Metals,6.11,Neutral
 Zinc,Industrial Metals,6.09,Neutral
 Beef,Livestock,5.92,Constructive Setup
@@ -14,7 +15,6 @@ KRW/USD,Forex,5.77,Neutral
 WTI Crude,Energy,5.29,Constructive Setup
 Rice,Agriculture,5.23,Neutral
 Inflation,Macro,5.16,Neutral
-Coffee,Agriculture,5.14,Neutral
 Wheat,Agriculture,4.99,Neutral
 Corn,Agriculture,4.98,Neutral
 Stainless Steel Wire,Macro,4.9,Neutral
@@ -28,6 +28,7 @@ USD/INR,Forex,4.66,Neutral
 Oats,Macro,4.65,Neutral
 Cotton,Agriculture,4.64,Neutral
 Pork,Livestock,4.61,Neutral
+Sugar,Agriculture,4.28,Neutral
 Gold,Precious Metals,4.08,Positive Momentum
 Silver,Precious Metals,4.08,Positive Momentum
 VIX,Macro,3.97,Neutral
