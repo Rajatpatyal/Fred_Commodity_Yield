@@ -11,33 +11,32 @@ Aluminum,Industrial Metals,6.08,Neutral
 Zinc,Industrial Metals,6.06,Neutral
 Beef,Livestock,5.88,Constructive Setup
 Lead,Industrial Metals,5.83,Neutral
-KRW/USD,Forex,5.73,Neutral
 WTI Crude,Energy,5.25,Constructive Setup
 Rice,Agriculture,5.2,Neutral
 Inflation,Macro,5.12,Neutral
 Wheat,Agriculture,4.96,Neutral
 Corn,Agriculture,4.95,Neutral
 Stainless Steel Wire,Macro,4.86,Neutral
-USD/JPY,Macro,4.83,Neutral
 JPY/USD,Forex,4.83,Neutral
-Barley,Agriculture,4.72,Neutral
+USD/JPY,Macro,4.83,Neutral
 US Dollar Index,Forex,4.72,Neutral
+Barley,Agriculture,4.72,Neutral
 Iron Ore,Macro,4.68,Neutral
-USD/INR,Forex,4.62,Neutral
 Oats,Macro,4.62,Neutral
+USD/INR,Forex,4.62,Neutral
 USD/INR,Forex,4.62,Neutral
 Cotton,Agriculture,4.61,Neutral
 Pork,Livestock,4.58,Neutral
 Sugar,Agriculture,4.24,Neutral
-Gold,Precious Metals,4.05,Positive Momentum
 Silver,Precious Metals,4.05,Positive Momentum
+Gold,Precious Metals,4.05,Positive Momentum
 VIX,Macro,3.95,Neutral
 USD/CNY,Macro,3.62,Neutral
 30Y Treasury,Fixed Income,3.52,Neutral
 10Y Treasury,Fixed Income,3.48,Neutral
+2Y Treasury,Fixed Income,3.46,Neutral
 Unemployment,Macro,3.46,Neutral
 Milk,Livestock,3.46,Neutral
-2Y Treasury,Fixed Income,3.46,Neutral
 Fed Funds,Macro,3.41,Neutral
 Natural Gas,Energy,3.38,Neutral
 Eggs,Livestock,3.26,Neutral
