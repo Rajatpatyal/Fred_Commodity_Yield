@@ -15,8 +15,8 @@ KRW/USD,Forex,5.78,Neutral
 WTI Crude,Energy,5.3,Constructive Setup
 Rice,Agriculture,5.24,Neutral
 Inflation,Macro,5.17,Neutral
-Corn,Agriculture,5.0,Neutral
 Wheat,Agriculture,5.0,Neutral
+Corn,Agriculture,5.0,Neutral
 Stainless Steel Wire,Macro,4.91,Neutral
 USD/JPY,Macro,4.88,Neutral
 JPY/USD,Forex,4.88,Neutral
@@ -25,19 +25,18 @@ US Dollar Index,Forex,4.76,Neutral
 Iron Ore,Macro,4.73,Neutral
 USD/INR,Forex,4.67,Neutral
 USD/INR,Forex,4.67,Neutral
-Oats,Macro,4.66,Neutral
 Cotton,Agriculture,4.66,Neutral
+Oats,Macro,4.66,Neutral
 Pork,Livestock,4.62,Neutral
 Sugar,Agriculture,4.29,Neutral
-Gold,Precious Metals,4.09,Positive Momentum
 Silver,Precious Metals,4.09,Positive Momentum
+Gold,Precious Metals,4.09,Positive Momentum
 VIX,Macro,3.97,Neutral
 USD/CNY,Macro,3.66,Neutral
 30Y Treasury,Fixed Income,3.56,Neutral
-10Y Treasury,Fixed Income,3.53,Neutral
 Unemployment,Macro,3.5,Neutral
-Milk,Livestock,3.5,Neutral
 2Y Treasury,Fixed Income,3.5,Neutral
+Milk,Livestock,3.5,Neutral
 Fed Funds,Macro,3.46,Neutral
 Natural Gas,Energy,3.43,Neutral
 Eggs,Livestock,3.31,Neutral
