@@ -1,33 +1,33 @@
 Asset,Category,Score,Reason
 Copper,Industrial Metals,8.43,Positive Momentum
-Nickel,Industrial Metals,7.82,Positive Momentum
 Tin,Industrial Metals,7.23,Neutral
 Dow Jones,Equities,7.23,Neutral
-Soybeans,Agriculture,7.03,Positive Momentum
+Soybeans,Agriculture,7.05,Positive Momentum
 NASDAQ,Equities,6.95,Neutral
+Nickel,Industrial Metals,6.79,Neutral
 S&P 500,Equities,6.45,Neutral
-Coffee,Agriculture,6.18,Positive Momentum
-Aluminum,Industrial Metals,6.16,Neutral
-Zinc,Industrial Metals,6.14,Neutral
+Coffee,Agriculture,6.17,Positive Momentum
+Zinc,Industrial Metals,6.15,Neutral
+Aluminum,Industrial Metals,6.14,Neutral
 Beef,Livestock,5.97,Constructive Setup
-Lead,Industrial Metals,5.92,Neutral
+Lead,Industrial Metals,5.91,Neutral
 KRW/USD,Forex,5.82,Neutral
 WTI Crude,Energy,5.33,Constructive Setup
 Rice,Agriculture,5.28,Neutral
 Inflation,Macro,5.2,Neutral
-Wheat,Agriculture,5.04,Neutral
-Corn,Agriculture,5.03,Neutral
+Wheat,Agriculture,5.0,Neutral
+Corn,Agriculture,4.99,Neutral
 Stainless Steel Wire,Macro,4.95,Neutral
 USD/JPY,Macro,4.92,Neutral
 JPY/USD,Forex,4.92,Neutral
 Barley,Agriculture,4.81,Neutral
 US Dollar Index,Forex,4.8,Neutral
-Iron Ore,Macro,4.77,Neutral
+Iron Ore,Macro,4.74,Neutral
 USD/INR,Forex,4.71,Neutral
 USD/INR,Forex,4.71,Neutral
 Oats,Macro,4.7,Neutral
-Cotton,Agriculture,4.69,Neutral
-Pork,Livestock,4.66,Neutral
+Pork,Livestock,4.68,Neutral
+Cotton,Agriculture,4.67,Neutral
 Sugar,Agriculture,4.32,Neutral
 Gold,Precious Metals,4.13,Positive Momentum
 Silver,Precious Metals,4.13,Positive Momentum
