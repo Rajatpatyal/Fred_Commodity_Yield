@@ -3,7 +3,7 @@ Copper,Industrial Metals,8.43,Positive Momentum
 Tin,Industrial Metals,7.23,Neutral
 Dow Jones,Equities,7.23,Neutral
 Soybeans,Agriculture,7.05,Positive Momentum
-NASDAQ,Equities,6.95,Neutral
+NASDAQ,Equities,6.94,Neutral
 Nickel,Industrial Metals,6.79,Neutral
 S&P 500,Equities,6.45,Neutral
 Coffee,Agriculture,6.17,Positive Momentum
@@ -35,9 +35,9 @@ VIX,Macro,3.99,Neutral
 USD/CNY,Macro,3.7,Neutral
 30Y Treasury,Fixed Income,3.6,Neutral
 10Y Treasury,Fixed Income,3.57,Neutral
-Unemployment,Macro,3.54,Neutral
-Milk,Livestock,3.54,Neutral
+Milk,Livestock,3.55,Neutral
 2Y Treasury,Fixed Income,3.54,Neutral
+Unemployment,Macro,3.54,Neutral
 Fed Funds,Macro,3.49,Neutral
 Natural Gas,Energy,3.46,Neutral
 Eggs,Livestock,3.34,Neutral
