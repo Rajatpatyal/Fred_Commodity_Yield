@@ -5,6 +5,7 @@ Dow Jones,Equities,7.17,Neutral
 Soybeans,Agriculture,6.99,Positive Momentum
 NASDAQ,Equities,6.89,Neutral
 Nickel,Industrial Metals,6.73,Neutral
+WTI Crude,Energy,6.57,Strong Relative Strength
 S&P 500,Equities,6.39,Neutral
 Coffee,Agriculture,6.11,Positive Momentum
 Zinc,Industrial Metals,6.09,Neutral
@@ -12,7 +13,6 @@ Aluminum,Industrial Metals,6.08,Neutral
 Beef,Livestock,5.91,Constructive Setup
 Lead,Industrial Metals,5.85,Neutral
 KRW/USD,Forex,5.74,Neutral
-WTI Crude,Energy,5.32,Constructive Setup
 Rice,Agriculture,5.22,Neutral
 Inflation,Macro,5.14,Neutral
 Wheat,Agriculture,4.94,Neutral
@@ -39,7 +39,7 @@ Milk,Livestock,3.49,Neutral
 2Y Treasury,Fixed Income,3.48,Neutral
 Unemployment,Macro,3.48,Neutral
 Fed Funds,Macro,3.43,Neutral
-Natural Gas,Energy,3.4,Neutral
+Natural Gas,Energy,3.36,Neutral
 Eggs,Livestock,3.28,Neutral
 Poultry,Livestock,3.26,Neutral
 CAD/USD,Forex,3.17,Neutral
