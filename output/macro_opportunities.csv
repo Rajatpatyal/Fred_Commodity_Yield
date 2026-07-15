@@ -9,11 +9,11 @@ S&P 500,Equities,6.36,Neutral
 Coffee,Agriculture,6.08,Positive Momentum
 Zinc,Industrial Metals,6.06,Neutral
 Aluminum,Industrial Metals,6.05,Neutral
+Beef,Livestock,5.88,Constructive Setup
 Lead,Industrial Metals,5.82,Neutral
 KRW/USD,Forex,5.71,Neutral
 WTI Crude,Energy,5.24,Constructive Setup
 Rice,Agriculture,5.19,Neutral
-Beef,Livestock,5.13,Neutral
 Inflation,Macro,5.11,Neutral
 Wheat,Agriculture,4.91,Neutral
 Corn,Agriculture,4.9,Neutral
@@ -26,6 +26,7 @@ Iron Ore,Macro,4.65,Neutral
 USD/INR,Forex,4.62,Neutral
 USD/INR,Forex,4.62,Neutral
 Oats,Macro,4.61,Neutral
+Pork,Livestock,4.59,Neutral
 Cotton,Agriculture,4.58,Neutral
 Sugar,Agriculture,4.23,Neutral
 Gold,Precious Metals,4.04,Positive Momentum
