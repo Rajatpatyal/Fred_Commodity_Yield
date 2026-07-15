@@ -36,8 +36,8 @@ USD/CNY,Macro,3.64,Neutral
 30Y Treasury,Fixed Income,3.54,Neutral
 10Y Treasury,Fixed Income,3.51,Neutral
 Milk,Livestock,3.49,Neutral
-Unemployment,Macro,3.48,Neutral
 2Y Treasury,Fixed Income,3.48,Neutral
+Unemployment,Macro,3.48,Neutral
 Fed Funds,Macro,3.43,Neutral
 Natural Gas,Energy,3.4,Neutral
 Eggs,Livestock,3.28,Neutral
@@ -48,6 +48,7 @@ GBP/USD,Forex,3.16,Neutral
 EUR/USD,Forex,3.12,Neutral
 EUR/USD,Forex,3.12,Neutral
 CHF/USD,Forex,3.06,Neutral
+USD/CHF,Macro,3.06,Neutral
 AUD/USD,Forex,3.03,Neutral
-Palladium,Precious Metals,2.82,Neutral
 Platinum,Precious Metals,2.82,Neutral
+Palladium,Precious Metals,2.82,Neutral
