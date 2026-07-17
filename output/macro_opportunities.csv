@@ -1,9 +1,11 @@
 Asset,Category,Score,Reason
+Copper,Industrial Metals,8.41,Positive Momentum
 Tin,Industrial Metals,7.21,Neutral
 Dow Jones,Equities,7.2,Neutral
 Soybeans,Agriculture,7.03,Positive Momentum
 NASDAQ,Equities,6.92,Neutral
 Nickel,Industrial Metals,6.77,Neutral
+WTI Crude,Energy,6.61,Strong Relative Strength
 S&P 500,Equities,6.43,Neutral
 Coffee,Agriculture,6.15,Positive Momentum
 Zinc,Industrial Metals,6.12,Neutral
@@ -22,8 +24,8 @@ Barley,Agriculture,4.78,Neutral
 US Dollar Index,Forex,4.78,Neutral
 Iron Ore,Macro,4.72,Neutral
 USD/INR,Forex,4.68,Neutral
-USD/INR,Forex,4.68,Neutral
 Oats,Macro,4.68,Neutral
+USD/INR,Forex,4.68,Neutral
 Pork,Livestock,4.66,Neutral
 Cotton,Agriculture,4.64,Neutral
 Sugar,Agriculture,4.3,Neutral
@@ -37,6 +39,7 @@ Unemployment,Macro,3.52,Neutral
 Milk,Livestock,3.52,Neutral
 2Y Treasury,Fixed Income,3.51,Neutral
 Fed Funds,Macro,3.47,Neutral
+Natural Gas,Energy,3.39,Neutral
 Eggs,Livestock,3.31,Neutral
 Poultry,Livestock,3.3,Neutral
 CAD/USD,Forex,3.21,Neutral
