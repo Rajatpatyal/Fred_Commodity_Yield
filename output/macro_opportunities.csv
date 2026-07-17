@@ -18,7 +18,6 @@ Inflation,Macro,5.13,Neutral
 Wheat,Agriculture,4.93,Neutral
 Corn,Agriculture,4.92,Neutral
 Stainless Steel Wire,Macro,4.88,Neutral
-USD/JPY,Macro,4.84,Neutral
 JPY/USD,Forex,4.84,Neutral
 Barley,Agriculture,4.74,Neutral
 US Dollar Index,Forex,4.73,Neutral
@@ -29,10 +28,9 @@ Oats,Macro,4.63,Neutral
 Pork,Livestock,4.61,Neutral
 Cotton,Agriculture,4.6,Neutral
 Sugar,Agriculture,4.25,Neutral
-Gold,Precious Metals,4.06,Positive Momentum
 Silver,Precious Metals,4.06,Positive Momentum
+Gold,Precious Metals,4.06,Positive Momentum
 VIX,Macro,3.96,Neutral
-USD/CNY,Macro,3.63,Neutral
 30Y Treasury,Fixed Income,3.53,Neutral
 10Y Treasury,Fixed Income,3.5,Neutral
 Milk,Livestock,3.48,Neutral
@@ -44,11 +42,8 @@ Eggs,Livestock,3.26,Neutral
 Poultry,Livestock,3.25,Neutral
 CAD/USD,Forex,3.16,Neutral
 GBP/USD,Forex,3.15,Neutral
-GBP/USD,Forex,3.15,Neutral
-EUR/USD,Forex,3.11,Neutral
 EUR/USD,Forex,3.11,Neutral
 CHF/USD,Forex,3.04,Neutral
-USD/CHF,Macro,3.04,Neutral
 AUD/USD,Forex,3.02,Neutral
 Platinum,Precious Metals,2.81,Neutral
 Palladium,Precious Metals,2.81,Neutral
