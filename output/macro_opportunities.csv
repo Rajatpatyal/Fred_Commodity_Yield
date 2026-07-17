@@ -18,7 +18,6 @@ Inflation,Macro,5.13,Neutral
 Wheat,Agriculture,4.93,Neutral
 Corn,Agriculture,4.92,Neutral
 Stainless Steel Wire,Macro,4.88,Neutral
-USD/JPY,Macro,4.84,Neutral
 JPY/USD,Forex,4.84,Neutral
 Barley,Agriculture,4.74,Neutral
 US Dollar Index,Forex,4.73,Neutral
@@ -50,5 +49,5 @@ EUR/USD,Forex,3.11,Neutral
 CHF/USD,Forex,3.04,Neutral
 USD/CHF,Macro,3.04,Neutral
 AUD/USD,Forex,3.02,Neutral
-Platinum,Precious Metals,2.81,Neutral
 Palladium,Precious Metals,2.81,Neutral
+Platinum,Precious Metals,2.81,Neutral
