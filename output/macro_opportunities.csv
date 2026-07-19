@@ -1,20 +1,47 @@
 Asset,Category,Score,Reason
+Copper,Industrial Metals,8.36,Positive Momentum
+Tin,Industrial Metals,7.16,Neutral
+Dow Jones,Equities,7.15,Neutral
+Soybeans,Agriculture,6.98,Positive Momentum
+NASDAQ,Equities,6.87,Neutral
+Nickel,Industrial Metals,6.72,Neutral
+WTI Crude,Energy,6.56,Strong Relative Strength
+S&P 500,Equities,6.38,Neutral
+Coffee,Agriculture,6.1,Positive Momentum
+Zinc,Industrial Metals,6.08,Neutral
+Aluminum,Industrial Metals,6.06,Neutral
+Beef,Livestock,5.9,Constructive Setup
+Lead,Industrial Metals,5.84,Neutral
 KRW/USD,Forex,5.73,Neutral
+Rice,Agriculture,5.2,Neutral
 Inflation,Macro,5.13,Neutral
-JPY/USD,Forex,4.84,Neutral
+Wheat,Agriculture,4.93,Neutral
+Corn,Agriculture,4.92,Neutral
+Stainless Steel Wire,Macro,4.88,Neutral
 USD/JPY,Macro,4.84,Neutral
+JPY/USD,Forex,4.84,Neutral
+Barley,Agriculture,4.74,Neutral
 US Dollar Index,Forex,4.73,Neutral
+Iron Ore,Macro,4.67,Neutral
 USD/INR,Forex,4.64,Neutral
 USD/INR,Forex,4.64,Neutral
+Oats,Macro,4.63,Neutral
+Pork,Livestock,4.61,Neutral
+Cotton,Agriculture,4.6,Neutral
+Sugar,Agriculture,4.25,Neutral
 Gold,Precious Metals,4.06,Positive Momentum
 Silver,Precious Metals,4.06,Positive Momentum
 VIX,Macro,3.96,Neutral
 USD/CNY,Macro,3.63,Neutral
 30Y Treasury,Fixed Income,3.53,Neutral
 10Y Treasury,Fixed Income,3.5,Neutral
+Milk,Livestock,3.48,Neutral
 Unemployment,Macro,3.47,Neutral
 2Y Treasury,Fixed Income,3.46,Neutral
 Fed Funds,Macro,3.42,Neutral
+Natural Gas,Energy,3.34,Neutral
+Eggs,Livestock,3.26,Neutral
+Poultry,Livestock,3.25,Neutral
 CAD/USD,Forex,3.16,Neutral
 GBP/USD,Forex,3.15,Neutral
 GBP/USD,Forex,3.15,Neutral
