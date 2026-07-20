@@ -29,8 +29,8 @@ Oats,Macro,4.63,Neutral
 Pork,Livestock,4.61,Neutral
 Cotton,Agriculture,4.6,Neutral
 Sugar,Agriculture,4.25,Neutral
-Silver,Precious Metals,4.06,Positive Momentum
 Gold,Precious Metals,4.06,Positive Momentum
+Silver,Precious Metals,4.06,Positive Momentum
 VIX,Macro,3.96,Neutral
 USD/CNY,Macro,3.63,Neutral
 30Y Treasury,Fixed Income,3.53,Neutral
@@ -42,6 +42,7 @@ Fed Funds,Macro,3.42,Neutral
 Natural Gas,Energy,3.34,Neutral
 Eggs,Livestock,3.26,Neutral
 Poultry,Livestock,3.25,Neutral
+CAD/USD,Forex,3.16,Neutral
 GBP/USD,Forex,3.15,Neutral
 GBP/USD,Forex,3.15,Neutral
 EUR/USD,Forex,3.11,Neutral
