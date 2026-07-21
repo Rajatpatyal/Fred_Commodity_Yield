@@ -1,54 +1,54 @@
 Asset,Category,Score,Reason
-Copper,Industrial Metals,8.27,Positive Momentum
-Tin,Industrial Metals,7.07,Neutral
-Dow Jones,Equities,7.06,Neutral
-Soybeans,Agriculture,6.89,Positive Momentum
+Copper,Industrial Metals,8.28,Positive Momentum
+Tin,Industrial Metals,7.08,Neutral
+Dow Jones,Equities,7.07,Neutral
+Soybeans,Agriculture,6.9,Positive Momentum
 NASDAQ,Equities,6.78,Neutral
-Nickel,Industrial Metals,6.63,Neutral
-WTI Crude,Energy,6.47,Strong Relative Strength
+Nickel,Industrial Metals,6.64,Neutral
+WTI Crude,Energy,6.48,Strong Relative Strength
 S&P 500,Equities,6.29,Neutral
-Coffee,Agriculture,6.01,Positive Momentum
+Coffee,Agriculture,6.02,Positive Momentum
 Zinc,Industrial Metals,5.99,Neutral
-Aluminum,Industrial Metals,5.97,Neutral
+Aluminum,Industrial Metals,5.98,Neutral
 Beef,Livestock,5.81,Constructive Setup
 Lead,Industrial Metals,5.75,Neutral
-KRW/USD,Forex,5.64,Neutral
-Rice,Agriculture,5.11,Neutral
-Inflation,Macro,5.04,Neutral
+KRW/USD,Forex,5.65,Neutral
+Rice,Agriculture,5.12,Neutral
+Inflation,Macro,5.05,Neutral
+Corn,Agriculture,4.84,Neutral
 Wheat,Agriculture,4.84,Neutral
-Corn,Agriculture,4.83,Neutral
 Stainless Steel Wire,Macro,4.79,Neutral
 USD/JPY,Macro,4.76,Neutral
 JPY/USD,Forex,4.76,Neutral
 Barley,Agriculture,4.65,Neutral
 US Dollar Index,Forex,4.64,Neutral
 Iron Ore,Macro,4.58,Neutral
-USD/INR,Forex,4.55,Neutral
-USD/INR,Forex,4.55,Neutral
+USD/INR,Forex,4.56,Neutral
+USD/INR,Forex,4.56,Neutral
 Oats,Macro,4.54,Neutral
 Pork,Livestock,4.52,Neutral
 Cotton,Agriculture,4.51,Neutral
 Sugar,Agriculture,4.16,Neutral
 Gold,Precious Metals,3.97,Positive Momentum
 Silver,Precious Metals,3.97,Positive Momentum
-VIX,Macro,3.91,Neutral
+VIX,Macro,3.92,Neutral
 USD/CNY,Macro,3.54,Neutral
 30Y Treasury,Fixed Income,3.44,Neutral
-10Y Treasury,Fixed Income,3.4,Neutral
+10Y Treasury,Fixed Income,3.41,Neutral
 Milk,Livestock,3.39,Neutral
+2Y Treasury,Fixed Income,3.38,Neutral
 Unemployment,Macro,3.38,Neutral
-2Y Treasury,Fixed Income,3.37,Neutral
-Fed Funds,Macro,3.33,Neutral
-Natural Gas,Energy,3.25,Neutral
-Eggs,Livestock,3.17,Neutral
-Poultry,Livestock,3.16,Neutral
-CAD/USD,Forex,3.07,Neutral
+Fed Funds,Macro,3.34,Neutral
+Natural Gas,Energy,3.26,Neutral
+Eggs,Livestock,3.18,Neutral
+Poultry,Livestock,3.17,Neutral
+CAD/USD,Forex,3.08,Neutral
 GBP/USD,Forex,3.06,Neutral
 GBP/USD,Forex,3.06,Neutral
-EUR/USD,Forex,3.02,Neutral
-EUR/USD,Forex,3.02,Neutral
-CHF/USD,Forex,2.95,Neutral
-USD/CHF,Macro,2.95,Neutral
-AUD/USD,Forex,2.93,Neutral
+EUR/USD,Forex,3.03,Neutral
+EUR/USD,Forex,3.03,Neutral
+CHF/USD,Forex,2.96,Neutral
+USD/CHF,Macro,2.96,Neutral
+AUD/USD,Forex,2.94,Neutral
 Platinum,Precious Metals,2.72,Neutral
 Palladium,Precious Metals,2.72,Neutral
