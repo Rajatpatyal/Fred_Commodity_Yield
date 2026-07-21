@@ -12,14 +12,13 @@ Zinc,Industrial Metals,5.99,Neutral
 Aluminum,Industrial Metals,5.97,Neutral
 Beef,Livestock,5.81,Constructive Setup
 Lead,Industrial Metals,5.75,Neutral
-KRW/USD,Forex,5.64,Neutral
 Rice,Agriculture,5.11,Neutral
 Inflation,Macro,5.04,Neutral
 Wheat,Agriculture,4.84,Neutral
 Corn,Agriculture,4.83,Neutral
 Stainless Steel Wire,Macro,4.79,Neutral
-USD/JPY,Macro,4.76,Neutral
 JPY/USD,Forex,4.76,Neutral
+USD/JPY,Macro,4.76,Neutral
 Barley,Agriculture,4.65,Neutral
 US Dollar Index,Forex,4.64,Neutral
 Iron Ore,Macro,4.58,Neutral
@@ -29,8 +28,8 @@ Oats,Macro,4.54,Neutral
 Pork,Livestock,4.52,Neutral
 Cotton,Agriculture,4.51,Neutral
 Sugar,Agriculture,4.16,Neutral
-Gold,Precious Metals,3.97,Positive Momentum
 Silver,Precious Metals,3.97,Positive Momentum
+Gold,Precious Metals,3.97,Positive Momentum
 VIX,Macro,3.91,Neutral
 USD/CNY,Macro,3.54,Neutral
 30Y Treasury,Fixed Income,3.44,Neutral
