@@ -1,10 +1,15 @@
 Asset,Category,Score,Reason
+Copper,Industrial Metals,8.28,Positive Momentum
 Tin,Industrial Metals,7.08,Neutral
 Dow Jones,Equities,7.07,Neutral
 Soybeans,Agriculture,6.9,Positive Momentum
 NASDAQ,Equities,6.79,Neutral
+Nickel,Industrial Metals,6.64,Neutral
+WTI Crude,Energy,6.48,Strong Relative Strength
 S&P 500,Equities,6.29,Neutral
 Coffee,Agriculture,6.02,Positive Momentum
+Zinc,Industrial Metals,5.99,Neutral
+Aluminum,Industrial Metals,5.98,Neutral
 Beef,Livestock,5.81,Constructive Setup
 Lead,Industrial Metals,5.75,Neutral
 KRW/USD,Forex,5.65,Neutral
@@ -31,9 +36,10 @@ USD/CNY,Macro,3.54,Neutral
 30Y Treasury,Fixed Income,3.45,Neutral
 10Y Treasury,Fixed Income,3.41,Neutral
 Milk,Livestock,3.39,Neutral
-Unemployment,Macro,3.38,Neutral
 2Y Treasury,Fixed Income,3.38,Neutral
+Unemployment,Macro,3.38,Neutral
 Fed Funds,Macro,3.34,Neutral
+Natural Gas,Energy,3.26,Neutral
 Eggs,Livestock,3.18,Neutral
 Poultry,Livestock,3.17,Neutral
 CAD/USD,Forex,3.08,Neutral
