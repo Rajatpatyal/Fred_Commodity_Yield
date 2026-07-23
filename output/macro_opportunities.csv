@@ -15,8 +15,8 @@ Lead,Industrial Metals,5.84,Neutral
 KRW/USD,Forex,5.74,Neutral
 Rice,Agriculture,5.21,Neutral
 Inflation,Macro,5.14,Neutral
-Wheat,Agriculture,4.93,Neutral
 Corn,Agriculture,4.93,Neutral
+Wheat,Agriculture,4.93,Neutral
 Stainless Steel Wire,Macro,4.88,Neutral
 USD/JPY,Macro,4.85,Neutral
 JPY/USD,Forex,4.85,Neutral
@@ -48,6 +48,7 @@ GBP/USD,Forex,3.15,Neutral
 EUR/USD,Forex,3.12,Neutral
 EUR/USD,Forex,3.12,Neutral
 CHF/USD,Forex,3.05,Neutral
+USD/CHF,Macro,3.05,Neutral
 AUD/USD,Forex,3.03,Neutral
-Palladium,Precious Metals,2.81,Neutral
 Platinum,Precious Metals,2.81,Neutral
+Palladium,Precious Metals,2.81,Neutral
