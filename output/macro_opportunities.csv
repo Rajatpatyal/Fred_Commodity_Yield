@@ -1,54 +1,13 @@
 Asset,Category,Score,Reason
-Copper,Industrial Metals,8.37,Positive Momentum
-Tin,Industrial Metals,7.17,Neutral
-Dow Jones,Equities,7.16,Neutral
-Soybeans,Agriculture,6.99,Positive Momentum
-NASDAQ,Equities,6.87,Neutral
-Nickel,Industrial Metals,6.73,Neutral
-WTI Crude,Energy,6.59,Strong Relative Strength
-S&P 500,Equities,6.38,Neutral
-Coffee,Agriculture,6.11,Positive Momentum
-Zinc,Industrial Metals,6.08,Neutral
-Aluminum,Industrial Metals,6.07,Neutral
-Beef,Livestock,5.9,Constructive Setup
-Lead,Industrial Metals,5.84,Neutral
-KRW/USD,Forex,5.74,Neutral
-Rice,Agriculture,5.21,Neutral
-Inflation,Macro,5.14,Neutral
-Corn,Agriculture,4.93,Neutral
-Wheat,Agriculture,4.93,Neutral
-Stainless Steel Wire,Macro,4.88,Neutral
-USD/JPY,Macro,4.85,Neutral
-JPY/USD,Forex,4.85,Neutral
-Barley,Agriculture,4.74,Neutral
-US Dollar Index,Forex,4.73,Neutral
-Iron Ore,Macro,4.67,Neutral
-USD/INR,Forex,4.65,Neutral
-USD/INR,Forex,4.65,Neutral
-Oats,Macro,4.63,Neutral
-Pork,Livestock,4.61,Neutral
-Cotton,Agriculture,4.6,Neutral
-Sugar,Agriculture,4.25,Neutral
-Gold,Precious Metals,4.06,Positive Momentum
-Silver,Precious Metals,4.06,Positive Momentum
-VIX,Macro,3.96,Neutral
-USD/CNY,Macro,3.63,Neutral
-30Y Treasury,Fixed Income,3.54,Neutral
-10Y Treasury,Fixed Income,3.51,Neutral
-Milk,Livestock,3.48,Neutral
-2Y Treasury,Fixed Income,3.48,Neutral
-Unemployment,Macro,3.47,Neutral
-Fed Funds,Macro,3.43,Neutral
-Natural Gas,Energy,3.35,Neutral
-Eggs,Livestock,3.27,Neutral
-Poultry,Livestock,3.26,Neutral
-CAD/USD,Forex,3.17,Neutral
-GBP/USD,Forex,3.15,Neutral
-GBP/USD,Forex,3.15,Neutral
-EUR/USD,Forex,3.12,Neutral
-EUR/USD,Forex,3.12,Neutral
-CHF/USD,Forex,3.05,Neutral
-USD/CHF,Macro,3.05,Neutral
-AUD/USD,Forex,3.03,Neutral
-Platinum,Precious Metals,2.81,Neutral
-Palladium,Precious Metals,2.81,Neutral
+Inflation,Macro,5.29,Neutral
+USD/JPY,Macro,5.0,Neutral
+USD/INR,Forex,4.8,Neutral
+USD/CNY,Macro,3.78,Neutral
+Gold,Precious Metals,3.71,Constructive Setup
+Silver,Precious Metals,3.71,Constructive Setup
+Unemployment,Macro,3.62,Neutral
+GBP/USD,Forex,3.3,Neutral
+EUR/USD,Forex,3.27,Neutral
+USD/CHF,Macro,3.2,Neutral
+Platinum,Precious Metals,2.96,Neutral
+Palladium,Precious Metals,2.96,Neutral
