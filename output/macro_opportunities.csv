@@ -1,7 +1,7 @@
 Asset,Category,Score,Reason
 Copper,Industrial Metals,8.28,Positive Momentum
 Tin,Industrial Metals,7.08,Neutral
-Dow Jones,Equities,7.06,Neutral
+Dow Jones,Equities,7.07,Neutral
 Soybeans,Agriculture,6.9,Positive Momentum
 NASDAQ,Equities,6.78,Neutral
 Nickel,Industrial Metals,6.64,Neutral
@@ -35,8 +35,8 @@ VIX,Macro,3.92,Neutral
 USD/CNY,Macro,3.54,Neutral
 30Y Treasury,Fixed Income,3.45,Neutral
 10Y Treasury,Fixed Income,3.42,Neutral
+2Y Treasury,Fixed Income,3.4,Neutral
 Milk,Livestock,3.39,Neutral
-2Y Treasury,Fixed Income,3.39,Neutral
 Unemployment,Macro,3.38,Neutral
 Fed Funds,Macro,3.34,Neutral
 Natural Gas,Energy,3.26,Neutral
